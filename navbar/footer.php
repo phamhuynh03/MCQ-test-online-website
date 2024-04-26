@@ -1,5 +1,5 @@
 <footer class="footer py-2">
-    <div class="container bg-light py-2">
+    <div class="container bg-white py-2">
         <div class="row align-items-sm-center">
             <div class="col">
                 <div class="footer-logo-wrapper text-center text-sm-start">
@@ -7,7 +7,7 @@
                 </div>
             </div>
             <div class="col">
-                <div class="container bg-light py-2">
+                <div class="container bg-white py-2">
                     <div class="footer-copyright-wrapper text-center">
                         &copy; 2024. All Rights Reserved.
                     </div>
