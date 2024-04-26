@@ -13,18 +13,11 @@
     <body>
         <?php include('./navbar/header.php'); ?>
 
-        <div class="text-center">
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <h1>Thông tin cá nhân</h1>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
+        <div class="container-fluid px-5 py-4">
+            <h1 class="text-primary">Thông tin cá nhân</h1>
+        </div>
+        <div class="container-fluid p-5 bg-secondary bg-opacity-10 text-white">
+            
         </div>
 
         <?php include('./navbar/footer.php'); ?>
