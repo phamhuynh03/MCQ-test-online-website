@@ -16,8 +16,27 @@
         <div class="container-fluid px-5 py-4">
             <h1 class="text-primary">Các khóa học hiện có</h1>
         </div>
-        <div class="container-fluid p-5 bg-secondary bg-opacity-10 text-white">
-            
+        <div class="container-fluid px-5 bg-secondary bg-opacity-10 text-white">
+            <form class="form-inline d-flex" action="search_processing.php" method="POST">
+                <div class="row row-cols-1 p-5">
+                    <div class="col-xl-4 ps-4 py-2">
+                        <input class="form-control" type="Search" name="Search" id="Search" placeholder="Khóa học" aria-label="Search"
+                            <?php if(isset($_SESSION['Search'])) echo "value='{$_SESSION['Search']}'"; ?>>
+                    </div>
+                    <div class="col-xl-3 ps-4 py-2">
+                        <input class="form-control" type="Search" name="Search" id="Search" placeholder="Trường" aria-label="Search"
+                            <?php if(isset($_SESSION['Search'])) echo "value='{$_SESSION['Search']}'"; ?>>
+                    </div>
+                    <div class="col-xl-3 ps-4 py-2">
+                        <input class="form-control" type="Search" name="Search" id="Search" placeholder="Giảng viên" aria-label="Search"
+                            <?php if(isset($_SESSION['Search'])) echo "value='{$_SESSION['Search']}'"; ?>>
+                    </div>
+                    <div class="col-xl-2 ps-4 py-2">
+                        <button class="btn bg-primary bg-opacity-10" type="Submit"><img src="./asset/img/search.svg"></button>
+                    </div>
+                </div>
+            </form>
+
             <?php if(isset($_GET['error'])){?>
                 <p class="text-center" id="message"><?php echo $_GET['error']; ?></p>
             <?php }?>
@@ -41,16 +60,16 @@
                                         var school = $(this).find('school').text();
                                         var courseHTML = '<div class="col p-2">' 
                                                             + '<div class="card h-100">' 
-                                                                + '<img class="card-img-top" src="./asset/img/course/' + Math.floor(Math.random() * 6 + 1) + '.svg" alt="Card image cap">'
-                                                                + ' <div class="card-body bg-primary bg-opacity-25">' 
+                                                                + '<img class="card-img-top" src="./asset/img/course/' + Math.floor(Math.random() * 6 + 1) + '.svg" alt="' + course_name + '" title="' + course_name + '">'
+                                                                + ' <div class="card-body bg-primary bg-opacity-10">' 
                                                                     + '<h4 class="card-title lh-sm text-dark">' + course_name + '</h4>'
                                                                     + '<p class="card-text lh-sm text-secondary">' + description + '</p>' 
                                                                     + '<p class="card-text lh-sm text-secondary">Số câu hỏi: ' + num_ques + ' câu</p>'
                                                                     + '<h6 class="card-text lh-sm text-dark">Giảng viên: ' + teacher + '</h6>'
                                                                     + '<h6 class="card-text lh-sm text-dark">' + school + '</h6>'
                                                                 + '</div>'
-                                                                + ' <div class="card-footer bg-primary bg-opacity-10">' 
-                                                                    + '<a href="#" class="btn btn-md bg-white float-end">Làm bài</a>'
+                                                                + ' <div class="card-footer">' 
+                                                                    + '<a href="#" class="btn btn-md bg-primary bg-opacity-25 float-end">Làm bài</a>'
                                                                 + '</div>' 
                                                             + '</div>' 
                                                         + '</div>';
