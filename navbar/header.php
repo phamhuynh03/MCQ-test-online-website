@@ -66,6 +66,9 @@
     <?php
         if(isset($_GET['page'])){
             $page = $_GET['page'];
+            $_SESSION['Course_search'] = "";
+            $_SESSION['School_search'] = "";
+            $_SESSION['Teacher_search'] = "";
             header("Location: $page.php");
         }
     ?>

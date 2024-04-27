@@ -16,75 +16,79 @@
         <div class="container-fluid px-5 py-4">
             <h1 class="text-primary">Các khóa học hiện có</h1>
         </div>
+        <script>
+            $(function(){
+                $("#Course_search").autocomplete({source: './controller/search_course_auto.php'});
+                $("#School_search").autocomplete({source: './controller/search_school_auto.php'});
+                $("#Teacher_search").autocomplete({source: './controller/search_teacher_auto.php'});
+            });
+        </script>
         <div class="container-fluid px-5 bg-secondary bg-opacity-10 text-white">
-            <form class="form-inline d-flex" action="search_processing.php" method="POST">
-                <div class="row row-cols-1 p-5">
-                    <div class="col-xl-4 ps-4 py-2">
-                        <input class="form-control" type="Search" name="Search" id="Search" placeholder="Khóa học" aria-label="Search"
-                            <?php if(isset($_SESSION['Search'])) echo "value='{$_SESSION['Search']}'"; ?>>
+            <form class="form-inline d-flex" action="./controller/search_processing.php" method="POST">
+                <div class="row row-cols-1 p-5 ms-1">
+                    <div class="col-xl-4 ps-2 py-2">
+                        <input class="form-control" type="Search" name="Course_search" id="Course_search" placeholder="Khóa học" aria-label="Course_search"
+                            <?php if(isset($_SESSION['Course_search'])) echo "value='{$_SESSION['Course_search']}'"; ?>>
                     </div>
-                    <div class="col-xl-3 ps-4 py-2">
-                        <input class="form-control" type="Search" name="Search" id="Search" placeholder="Trường" aria-label="Search"
-                            <?php if(isset($_SESSION['Search'])) echo "value='{$_SESSION['Search']}'"; ?>>
+                    <div class="col-xl-4 ps-2 py-2">
+                        <input class="form-control" type="Search" name="School_search" id="School_search" placeholder="Trường" aria-label="School_search"
+                            <?php if(isset($_SESSION['School_search'])) echo "value='{$_SESSION['School_search']}'"; ?>>
                     </div>
-                    <div class="col-xl-3 ps-4 py-2">
-                        <input class="form-control" type="Search" name="Search" id="Search" placeholder="Giảng viên" aria-label="Search"
-                            <?php if(isset($_SESSION['Search'])) echo "value='{$_SESSION['Search']}'"; ?>>
+                    <div class="col-xl-3 ps-2 py-2">
+                        <input class="form-control" type="Search" name="Teacher_search" id="Teacher_search" placeholder="Giảng viên" aria-label="Teacher_search"
+                            <?php if(isset($_SESSION['Teacher_search'])) echo "value='{$_SESSION['Teacher_search']}'"; ?>>
                     </div>
-                    <div class="col-xl-2 ps-4 py-2">
+                    <div class="col-xl-1 ps-2 py-2">
                         <button class="btn bg-primary bg-opacity-10" type="Submit"><img src="./asset/img/search.svg"></button>
                     </div>
                 </div>
             </form>
 
-            <?php if(isset($_GET['error'])){?>
-                <p class="text-center" id="message"><?php echo $_GET['error']; ?></p>
-            <?php }?>
-
-            <script>
-                setTimeout(function(){document.getElementById('message').style.display = 'none';}, 3000);
-            </script>
-            <div class="container">
-                <div class="row row-cols-1 row-cols-md-3" id="course-list">
-                    <script>
-                        $(document).ready(function(){
-                            $.ajax({
-                                url: 'get_course.php',
-                                dataType: 'xml',
-                                success: function(data){
-                                    $(data).find('course').each(function(){
-                                        var course_name = $(this).find('course_name').text();
-                                        var description = $(this).find('description').text();
-                                        var num_ques = $(this).find('num_ques').text();
-                                        var teacher = $(this).find('teacher').text();
-                                        var school = $(this).find('school').text();
-                                        var courseHTML = '<div class="col p-2">' 
-                                                            + '<div class="card h-100">' 
-                                                                + '<img class="card-img-top" src="./asset/img/course/' + Math.floor(Math.random() * 6 + 1) + '.svg" alt="' + course_name + '" title="' + course_name + '">'
-                                                                + ' <div class="card-body bg-primary bg-opacity-10">' 
-                                                                    + '<h4 class="card-title lh-sm text-dark">' + course_name + '</h4>'
-                                                                    + '<p class="card-text lh-sm text-secondary">' + description + '</p>' 
-                                                                    + '<p class="card-text lh-sm text-secondary">Số câu hỏi: ' + num_ques + ' câu</p>'
-                                                                    + '<h6 class="card-text lh-sm text-dark">Giảng viên: ' + teacher + '</h6>'
-                                                                    + '<h6 class="card-text lh-sm text-dark">' + school + '</h6>'
-                                                                + '</div>'
-                                                                + ' <div class="card-footer">' 
-                                                                    + '<a href="#" class="btn btn-md bg-primary bg-opacity-25 float-end">Làm bài</a>'
+            <?php if(isset($_SESSION['Check']) && ($_SESSION['Check'] == False)){?>
+                <h3 class="text-center text-dark vh-100">No course found!</h3>
+            <?php }else{?>
+                <div class="container">
+                    <div class="row row-cols-1 row-cols-md-3" id="course-list">
+                        <script>
+                            $(document).ready(function(){
+                                $.ajax({
+                                    url: './controller/get_course.php',
+                                    dataType: 'xml',
+                                    success: function(data){
+                                        $(data).find('course').each(function(){
+                                            var course_name = $(this).find('course_name').text();
+                                            var description = $(this).find('description').text();
+                                            var num_ques = $(this).find('num_ques').text();
+                                            var teacher = $(this).find('teacher').text();
+                                            var school = $(this).find('school').text();
+                                            var courseHTML = '<div class="col p-2">' 
+                                                                + '<div class="card h-100">' 
+                                                                    + '<img class="card-img-top" src="./asset/img/course/' + Math.floor(Math.random() * 6 + 1) + '.svg" alt="' + course_name + '" title="' + course_name + '">'
+                                                                    + ' <div class="card-body bg-primary bg-opacity-10">' 
+                                                                        + '<h4 class="card-title lh-sm text-dark">' + course_name + '</h4>'
+                                                                        + '<p class="card-text lh-sm text-secondary">' + description + '</p>' 
+                                                                        + '<p class="card-text lh-sm text-secondary">Số câu hỏi: ' + num_ques + ' câu</p>'
+                                                                        + '<h6 class="card-text lh-sm text-dark">Giảng viên: ' + teacher + '</h6>'
+                                                                        + '<h6 class="card-text lh-sm text-dark">' + school + '</h6>'
+                                                                    + '</div>'
+                                                                    + ' <div class="card-footer">' 
+                                                                        + '<a href="#" class="btn btn-md bg-primary bg-opacity-25 float-end">Làm bài</a>'
+                                                                    + '</div>' 
                                                                 + '</div>' 
-                                                            + '</div>' 
-                                                        + '</div>';
-                                        $('#course-list').append(courseHTML);
-                                    });
-                                },
-                                error: function(xhr, status, error) {
-                                    console.error("Error fetching courses:", error);
-                                    $('#course-error').append('<li>Error fetching courses. Please try again later.</li>');
-                                }
+                                                            + '</div>';
+                                            $('#course-list').append(courseHTML);
+                                        });
+                                    },
+                                    error: function(xhr, status, error) {
+                                        console.error("Error fetching courses:", error);
+                                        $('#course-error').append('<li>Error fetching courses. Please try again later.</li>');
+                                    }
+                                });
                             });
-                        });
-                    </script>
+                        </script>
+                    </div>
                 </div>
-            </div>            
+            <?php }?>
         </div>
 
         <?php include('./navbar/footer.php'); ?>
