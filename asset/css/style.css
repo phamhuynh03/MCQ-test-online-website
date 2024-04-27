@@ -12,120 +12,132 @@ html {
 /* Reset */
 
 
-
-/* Heaeder CSS */
-.header {
-    position: sticky;
+/*Header css*/
+#header {
+    position: fixed;
     top: 0;
-    z-index: 1000;
+    left: 0;
+    right: 0;
+    height: 46px;
     background-color: black;
-    color: #fff;
-    padding: 0;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    overflow: hidden;
 }
 
-.logo-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 200px;
-}
-
-.logo-container img {
-    width: 152px;
-    height: 72px;
-    margin: 0;
-    padding: 4px 4px;
-}
-
-.navbar li {
+#nav {
     display: inline-block;
-    width: 150px;
-    text-align: center;
-    font-size: 1.25vw;
+    list-style-type: none;
 }
 
-.navbar li a {
-    display: block;
-    text-decoration: none;
-    color: white;
-    transition: color 0.3s;
-    line-height: 72px;
-    
-}
-
-.navbar li:hover {
-    background-color: white;
-}
-
-.navbar li:hover a {
-    color: black;
-}
-
-.navbar.login-register {
-    display: flex;
-    margin-left: auto;
-}
-
-/* Heaeder CSS */
-
-/* Context CSS */
-.img-container {
-    display: block;
-    width: 100%;
-}
-
-.img-container img {
-    width: 100%;
-}
-
-
-.img-container {
+#nav>li {
+    display: inline-block;
     position: relative;
 }
 
-h2 {
-    margin-bottom: 12px;
-    width: 100%;
-    font-size: 2.5vw;
-}
-
-.description {
-    position: absolute;
-    top: 50%;
-    left: 20%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
+#nav>li>a {
     color: white;
-    border-radius: 10px;
-    width: 416px;
-    height: 300px;
-    text-align: justify;
-    text-justify: inter-word;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-    word-wrap: break-word;
+    text-transform: uppercase;
 }
 
-p {
+#nav li a {
+    text-decoration: none;
+    line-height: 46px;
+    padding: 0 24px;
+    display: block;
+}
+
+
+#nav>li:hover>a {
+    background-color: #ccc;
+    color: black;
+}
+
+#header .mobile-menu-btn {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#header .mobile-menu-btn,
+#header .logo {
+    float: right;
+    height: 46px;
+    padding: 0 24px;
+}
+
+#header .menu-icon {
+    color: white;
+    line-height: 46px;
+}
+
+#header .mobile-menu-btn:hover {
+    background-color: gray;
+}
+
+#header .mobile-menu-btn:hover .menu-icon {
+    color: black;
+}
+
+#header .logo-quizbk {
+    max-width: 100px;
+    line-height: 46px;
+}
+
+/*Header css*/
+
+/*Content css*/
+#content {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+    margin-top: 46px;
+}
+
+#content .background-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: -1;
+}
+
+#content .about-section {
+    position: relative;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+
+    width: 33%;
+    margin: 0 auto;
+    padding: 64px 12px;
+}
+
+#content .about-heading {
     font-size: 20px;
+    font-weight: 500px;
+    text-align: justify;
+    padding-bottom: 20px;
+}
+
+#content .about-describe {
+    font-size: 16px;
+    text-align: justify;
+    padding-bottom: 20px;
+    line-height: 1.6;
 }
 
 .buttons {
-    margin-top: 20px;
     display: flex;
     justify-content: space-between;
     text-align: center;
     width: 100%;
 }
-.buttons .teacher-btn,
+
 .buttons .btn {
     text-decoration: none;
     color: white;
@@ -138,57 +150,118 @@ p {
     width: 100%;
 }
 
-.buttons .teacher-btn:hover,
 .buttons .btn:hover {
     background-color: #0056b3;
 }
 
-/* Context CSS */
+/*Content css*/
 
-
-
-
-/* Footer CSS */
-footer {
+/*Content footer*/
+#footer {
+    display: flex;
+    justify-content: space-between;
+    min-height: 100px;
+    max-height: 150px;
     background-color: white;
     color: black;
-    padding: 20px;
 }
 
-.footer-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+#footer .black-logo {
+    float: left;
+    height: 100px;
+    padding: 0 24px;
 }
 
-.black-logo {
-    width: 150px;
+#footer .copyright {
+    margin-top: 50px;
+    color: rgba(0, 0, 0, 0.6);
 }
 
 .info {
     list-style-type: none;
-    margin: 0;
+    margin-top: 50px;
     padding: 0;
     display: flex;
+    text-align: center;
 }
 
 .info li {
     margin-right: 20px;
+
 }
 
 .info li:last-child {
-    margin-right: 0;
+    margin-right: 24px;
 }
 
 .info li a {
     text-decoration: none;
-    color: black;
+    color: rgba(0, 0, 0, 0.6);
 }
 
-/* Footer CSS */
 
-.separator {
-    border-top: 1px solid #ccc;
-    margin-top: 20px;
-    margin-bottom: 20px;
+/*Content footer*/
+
+
+/*Break points*/
+
+/*PC*/
+@media(min-width: 1024px) {}
+
+/*Tablet*/
+@media(min-width: 831px) and (max-width: 1023px) {}
+
+/*Mobile*/
+@media(max-width: 830px) {
+    #nav {
+        display: block;
+    }
+
+    #nav>li {
+        display: block;
+    }
+
+    #nav>li:first-child {
+        display: inline-block;
+    }
+
+    #header .logo {
+        display: none;
+    }
+
+    #header .mobile-menu-btn {
+        display: block;
+    }
+
+    #content .about-section p,
+    #content .about-section h2 {
+        display: none;
+    }
+
+    .buttons {
+        flex-direction: column;
+        padding-right: 20px;
+    }
+
+    #footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #footer .black-logo {
+        float: none;
+        margin: 8px 0;
+    }
+
+    #footer .copyright {
+        margin-top: 8px;
+        margin-bottom: 12px;
+    }
+
+    .info {
+        justify-content: space-between;
+        margin: 12px auto;
+        padding-bottom: 8px;
+    }
 }
