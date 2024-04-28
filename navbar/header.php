@@ -1,7 +1,7 @@
 <?php
     session_start();
     $username="";
-    if(isset($_SESSION['Email']) && $_SESSION['Email']!="")
+    if(isset($_SESSION['First_name']) && $_SESSION['First_name']!="")
         $username = $_SESSION['First_name'];
 
     if($username!="")
