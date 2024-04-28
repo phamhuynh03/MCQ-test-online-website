@@ -61,7 +61,7 @@
                             <button class="btn btn-lg w-100 bg-primary bg-opacity-10" id="login_btn">Xác nhận</button>
                         </div>
                         <div class="row">
-                            <p>Bạn đã có tài khoản? <a href="./login.php">Đăng ký ngay</a></p>
+                            <p>Bạn đã có tài khoản? <a href="./login.php">Đăng nhập ngay</a></p>
                         </div>
 
                         <?php

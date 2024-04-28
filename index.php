@@ -20,7 +20,7 @@
                     <h1 class="about-heading">Chào mừng đến với QuizBK!</h1>
                     <h6 class="about-describe">Tạo ra những khóa học của riêng bạn để mọi người có thể tham gia. Các khóa học sẽ giúp học sinh, sinh viên củng cố kiến thức và học hỏi nhiều thêm.</h6>
                     <div class="buttons">
-                        <a href="./mycourse.php" class="btn">Khóa học của tôi</a>
+                        <a href="index.php?page=mycourse" class="btn">Khóa học của tôi</a>
                     </div>
                 </div>
             </div>
@@ -31,7 +31,7 @@
                     <h1 class="about-heading">Chào mừng đến với QuizBK!</h1>
                     <h6 class="about-describe">Tham gia với chúng tôi để có thể làm các bài kiểm tra trắc nghiệm để củng cố kiến thức, cải thiện điểm số và đạt được mục tiêu mà bạn mong muốn.</h6>
                     <div class="buttons">
-                        <a href="./course.php" class="btn">Làm kiểm tra ngay</a>
+                        <a href="index.php?page=course" class="btn">Làm kiểm tra ngay</a>
                     </div>
                 </div>
             </div>
