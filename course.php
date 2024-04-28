@@ -8,7 +8,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <link href = "https://code.jquery.com/ui/1.13.2/themes/black-tie/jquery-ui.css" rel = "stylesheet">
         <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="./asset/css/style.css">
     </head>
     <body>
         <?php include('./navbar/header.php'); ?>
@@ -24,17 +24,17 @@
             });
         </script>
         <div class="container-fluid px-5 bg-secondary bg-opacity-10 text-white">
-            <form class="form-inline d-flex" action="./controller/search_processing.php" method="POST">
+            <form action="./controller/search_processing.php" method="POST">
                 <div class="row row-cols-1 px-5 py-2 ms-1">
-                    <div class="col-xl-4 ps-2 py-1">
+                    <div class="col-xl-3 ps-2 py-1">
                         <input class="form-control" type="Search" name="Course_search" id="Course_search" placeholder="Khóa học" aria-label="Course_search"
                             <?php if(isset($_SESSION['Course_search'])) echo "value='{$_SESSION['Course_search']}'"; ?>>
                     </div>
-                    <div class="col-xl-4 ps-2 py-1">
+                    <div class="col-xl-3 ps-2 py-1">
                         <input class="form-control" type="Search" name="School_search" id="School_search" placeholder="Trường" aria-label="School_search"
                             <?php if(isset($_SESSION['School_search'])) echo "value='{$_SESSION['School_search']}'"; ?>>
                     </div>
-                    <div class="col-xl-3 ps-2 py-1">
+                    <div class="col-xl-2 ps-2 py-1">
                         <input class="form-control" type="Search" name="Teacher_search" id="Teacher_search" placeholder="Giảng viên" aria-label="Teacher_search"
                             <?php if(isset($_SESSION['Teacher_search'])) echo "value='{$_SESSION['Teacher_search']}'"; ?>>
                     </div>
@@ -43,9 +43,6 @@
                     </div>
                 </div>
             </form>
-            <div class="pe-5 me-3 text-end">
-                <a href="index.php" class="btn btn-md bg-primary bg-opacity-25 float-end">Thêm khóa học</a>
-            </div>
 
             <?php if(isset($_SESSION['Check']) && ($_SESSION['Check'] == False)){?>
                 <h3 class="text-center text-dark vh-100">No course found!</h3>

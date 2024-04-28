@@ -12,6 +12,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <link href="https://code.jquery.com/ui/1.13.2/themes/black-tie/jquery-ui.css" rel="stylesheet">
         <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="./asset/css/style.css">
     </head>
     <body>
         <div class="login">
@@ -24,19 +25,19 @@
                 <div class="login-form row border rounded-4 p-5 shadow box-area">
                     <form action="register_processing.php" method="POST">
                         <div class="header-text text-center">
-                            <h2>Welcome!</h2>
-                            <p>Let's create your account</p>
+                            <h2>Đăng ký</h2>
+                            <p>Vui lòng tạo tài khoản của bạn tại đây!</p>
                         </div>
                         <div class="mb-3">
-                            <input type="text" name="First_name" id="First_name" placeholder="First name" class="form-control form-control-lg bg-light fs-6"
+                            <input type="text" name="First_name" id="First_name" placeholder="Tên" class="form-control form-control-lg bg-light fs-6"
                                 <?php if(isset($_SESSION['first'])) echo "value='{$_SESSION['first']}'"; ?>>
                         </div>
                         <div class="mb-3">
-                            <input type="text" name="Last_name" id="Last_name" placeholder="Last name" class="form-control form-control-lg bg-light fs-6"
+                            <input type="text" name="Last_name" id="Last_name" placeholder="Họ và tên đệm" class="form-control form-control-lg bg-light fs-6"
                                 <?php if(isset($_SESSION['last'])) echo "value='{$_SESSION['last']}'"; ?>>
                         </div>
                         <div class="mb-3">
-                            <input type="text" name="School" id="School" placeholder="School" class="form-control form-control-lg bg-light fs-6"
+                            <input type="text" name="School" id="School" placeholder="Trường" class="form-control form-control-lg bg-light fs-6"
                                 <?php if(isset($_SESSION['school'])) echo "value='{$_SESSION['school']}'"; ?>>
                         </div>
                         <div class="mb-3">
@@ -44,11 +45,11 @@
                                 <?php if(isset($_SESSION['reg_mail'])) echo "value='{$_SESSION['reg_mail']}'"; ?>>
                         </div>
                         <div class="mb-3">
-                            <input type="password" name="Password" id="Password" placeholder="Password" class="form-control form-control-lg bg-light fs-6"
+                            <input type="password" name="Password" id="Password" placeholder="Mật khẩu" class="form-control form-control-lg bg-light fs-6"
                                 <?php if(isset($_SESSION['reg_pass'])) echo "value='{$_SESSION['reg_pass']}'"; ?>>
                         </div>
                         <div class="mb-3">
-                            <input type="password" name="Confirm_pass" id="Confirm_pass" placeholder="Confirm password" class="form-control form-control-lg bg-light fs-6"
+                            <input type="password" name="Confirm_pass" id="Confirm_pass" placeholder="Nhập lại mật khẩu" class="form-control form-control-lg bg-light fs-6"
                                 <?php if(isset($_SESSION['confirm_pass'])) echo "value='{$_SESSION['confirm_pass']}'"; ?>>
                         </div>
 
@@ -57,10 +58,10 @@
                         <?php }?>
 
                         <div class="mb-3">
-                            <button class="btn btn-lg w-100 bg-primary bg-opacity-10" id="login_btn">Register</button>
+                            <button class="btn btn-lg w-100 bg-primary bg-opacity-10" id="login_btn">Xác nhận</button>
                         </div>
                         <div class="row">
-                            <p>Already have an account? <a href="./login.php">Sign in</a></p>
+                            <p>Bạn đã có tài khoản? <a href="./login.php">Đăng ký ngay</a></p>
                         </div>
 
                         <?php

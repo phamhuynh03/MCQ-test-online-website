@@ -1,117 +1,42 @@
-<?php
-$defaultFile = 'index.php';
-if (isset($_GET['page'])) {
-    $page = $_GET['page'];
-} else {
-    $page = '';
-}
-
-switch ($page) {
-    case 'index':
-        $includeFile = 'index.php';
-        break;
-    case 'courses':
-        $includeFile = 'courses.php';
-        break;
-    case 'login':
-        $includeFile = 'login.php';
-        break;
-    case 'register':
-        $includeFile = 'register.php';
-        break;
-    default:
-        $includeFile = $defaultFile;
-        break;
-}
-?>
-
-
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./asset/css/style.css">
-    <link rel="stylesheet" href="./asset/font/themify-icons/themify-icons.css">
-    <title><?php echo ucfirst($page) ? ucwords(str_replace('_', ' ', $page)) : 'Home'; ?> | QuizBK</title>
-</head>
-
-<body>
-    <div id="main">
-        <!-- Begin Header -->
-        <div id="header">
-            <ul id="nav">
-                <li><a href="#">Trang chủ</a></li>
-                <li><a href="#">Các khóa học</a></li>
-                <li><a href="#">Đăng nhập</a></li>
-                <li><a href="#">Đăng kí</a></li>
-            </ul>
-            <div class="logo">
-                <img src="./asset/img/logo_dark.svg" alt="logo" class="logo-quizbk">
-            </div>
-            <div id="mobile-menu" class="mobile-menu-btn">
-                <i class="menu-icon ti-menu"></i>
-            </div>
-        </div>
-
-        <!-- End Header -->
-
-        <!-- Begin Content -->
-        <div id="content">
-            <img src="./asset/img/banner.svg" alt="banner" class="background-image">
-            <div class="about-section">
-                <h2 class="about-heading">Chào mừng đến với QuizBK!</h2>
-                <p class="about-describe">Tham gia với chúng tôi để có thể làm các bài kiểm tra trắc nghiệm để củng cố kiến thức, cải thiện điểm số và đạt được mục tiêu mà bạn mong muốn.</p>
-                <div class="buttons">
-                    <a href="#" class="btn">Đăng nhập</a>
-                    <a href="#" class="btn">Đăng ký</a>
+<html>
+    <head>
+        <title>Trang chủ</title>
+        <meta name="viewport" charset="utf-8">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <link href="https://code.jquery.com/ui/1.13.2/themes/black-tie/jquery-ui.css" rel="stylesheet">
+        <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="./asset/css/style.css">
+    </head>
+    <body>
+        <?php include('./navbar/header.php'); ?>
+        
+        <?php if(isset($logined) && $logined != "Login"){?>
+            <div id="content">
+                <img src="./asset/img/banner_teacher.svg" alt="banner" class="background-image">
+                <div class="about-section">
+                    <h1 class="about-heading">Chào mừng đến với QuizBK!</h1>
+                    <h6 class="about-describe">Tạo ra những khóa học của riêng bạn để mọi người có thể tham gia. Các khóa học sẽ giúp học sinh, sinh viên củng cố kiến thức và học hỏi nhiều thêm.</h6>
+                    <div class="buttons">
+                        <a href="./mycourse.php" class="btn">Khóa học của tôi</a>
+                    </div>
                 </div>
             </div>
-        </div>
+        <?php }else{?>
+            <div id="content">
+                <img src="./asset/img/banner.svg" alt="banner" class="background-image">
+                <div class="about-section">
+                    <h1 class="about-heading">Chào mừng đến với QuizBK!</h1>
+                    <h6 class="about-describe">Tham gia với chúng tôi để có thể làm các bài kiểm tra trắc nghiệm để củng cố kiến thức, cải thiện điểm số và đạt được mục tiêu mà bạn mong muốn.</h6>
+                    <div class="buttons">
+                        <a href="./course.php" class="btn">Làm kiểm tra ngay</a>
+                    </div>
+                </div>
+            </div>
+        <?php }?>
 
-        <!-- End Content -->
-        <!-- Begin Footer -->
-
-        <div id="footer">
-            <img src="./asset/img/logo_light.svg" alt="logo" class="black-logo">
-            <p class="copyright">&copy; QuizBK, <?php echo date('Y'); ?>. All rights reserved.</p>
-            <ul class="info">
-                <li><a href="#">Về chúng tôi</a></li>
-                <li><a href="#">Liên hệ</a></li>
-                <li><a href="#">Báo cáo</a></li>
-            </ul>
-        </div>
-
-        <!-- End Footer -->
-    </div>
-
-    <script>
-        var header = document.getElementById('header');
-        var mobileMenu = document.getElementById('mobile-menu');
-        var currentHeight = header.clientHeight;
-
-        mobileMenu.onclick = function() {
-            var isClose = header.clientHeight === currentHeight;
-            if (isClose) {
-                // If menu is closed, open it
-                header.style.height = 'auto';
-            } else {
-                // If menu is open, close it
-                header.style.height = '46px';
-            }
-        }
-
-
-        // var menuItems = document.querySelectorAll('#nav li a[href*="#"]')
-        // for (var i = 0; i < menuItems.length; i++){
-        //     var menuItem = menuItems[i];
-
-        //     menuItem.onclick = function() {
-        //         header.style.height = 'null';
-        //     }
-        // }
-    </script>
-</body>
-
+        <?php include('./navbar/footer.php'); ?>
+    </body>
 </html>

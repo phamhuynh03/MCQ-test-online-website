@@ -8,16 +8,82 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <link href = "https://code.jquery.com/ui/1.13.2/themes/black-tie/jquery-ui.css" rel = "stylesheet">
         <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="./asset/css/style.css">
     </head>
     <body>
         <?php include('./navbar/header.php'); ?>
-
+        
         <div class="container-fluid px-5 py-4">
             <h1 class="text-primary">Các khóa học của tôi</h1>
         </div>
-        <div class="container-fluid p-5 bg-secondary bg-opacity-10 text-white">
+        <script>
+            $(function(){
+                $("#Course_search").autocomplete({source: './controller/search_course_auto.php'});
+                $("#School_search").autocomplete({source: './controller/search_school_auto.php'});
+                $("#Teacher_search").autocomplete({source: './controller/search_teacher_auto.php'});
+            });
+        </script>
+        <div class="container-fluid px-5 bg-secondary bg-opacity-10 text-white">
+            <form action="./controller/search_processing.php" method="POST">
+                <div class="row row-cols-1 px-5 py-2 ms-1">
+                    <div class="col-xl-3 ps-2 py-1">
+                        <input class="form-control" type="Search" name="Course_search" id="Course_search" placeholder="Khóa học" aria-label="Course_search"
+                            <?php if(isset($_SESSION['Course_search'])) echo "value='{$_SESSION['Course_search']}'"; ?>>
+                    </div>
+                    <div class="col-xl-1 ps-2 py-1">
+                        <button class="btn bg-primary bg-opacity-10" type="Submit"><img src="./asset/img/search.svg"></button>
+                    </div>
+                    <div class="col-xl-8 pe-4 py-1 text-end">
+                        <a href="index.php" class="btn btn-md bg-primary bg-opacity-25 float-end">Thêm khóa học</a>
+                    </div>
+                </div>
+            </form>
 
+            <?php if(isset($_SESSION['Check']) && ($_SESSION['Check'] == False)){?>
+                <h3 class="text-center text-dark vh-100">No course found!</h3>
+            <?php }else{?>
+                <div class="container">
+                    <div class="row row-cols-1 row-cols-md-3" id="course-list">
+                        <script>
+                            $(document).ready(function(){
+                                $.ajax({
+                                    url: './controller/get_course.php',
+                                    dataType: 'xml',
+                                    success: function(data){
+                                        $(data).find('course').each(function(){
+                                            var course_name = $(this).find('course_name').text();
+                                            var description = $(this).find('description').text();
+                                            var num_ques = $(this).find('num_ques').text();
+                                            var teacher = $(this).find('teacher').text();
+                                            var school = $(this).find('school').text();
+                                            var courseHTML = '<div class="col p-2">' 
+                                                                + '<div class="card h-100">' 
+                                                                    + '<img class="card-img-top" src="./asset/img/course/' + Math.floor(Math.random() * 6 + 1) + '.svg" alt="' + course_name + '" title="' + course_name + '">'
+                                                                    + ' <div class="card-body bg-primary bg-opacity-10">' 
+                                                                        + '<h4 class="card-title lh-sm text-dark">' + course_name + '</h4>'
+                                                                        + '<p class="card-text lh-sm text-secondary">' + description + '</p>' 
+                                                                        + '<p class="card-text lh-sm text-secondary">Số câu hỏi: ' + num_ques + ' câu</p>'
+                                                                        + '<h6 class="card-text lh-sm text-dark">Giảng viên: ' + teacher + '</h6>'
+                                                                        + '<h6 class="card-text lh-sm text-dark">' + school + '</h6>'
+                                                                    + '</div>'
+                                                                    + ' <div class="card-footer">' 
+                                                                        + '<a href="#" class="btn btn-md bg-primary bg-opacity-25 float-end">Làm bài</a>'
+                                                                    + '</div>' 
+                                                                + '</div>' 
+                                                            + '</div>';
+                                            $('#course-list').append(courseHTML);
+                                        });
+                                    },
+                                    error: function(xhr, status, error) {
+                                        console.error("Error fetching courses:", error);
+                                        $('#course-error').append('<li>Error fetching courses. Please try again later.</li>');
+                                    }
+                                });
+                            });
+                        </script>
+                    </div>
+                </div>
+            <?php }?>
         </div>
 
         <?php include('./navbar/footer.php'); ?>

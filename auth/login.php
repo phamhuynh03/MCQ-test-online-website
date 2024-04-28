@@ -12,6 +12,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <link href="https://code.jquery.com/ui/1.13.2/themes/black-tie/jquery-ui.css" rel="stylesheet">
         <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="./asset/css/style.css">
     </head>
     <style>
 
@@ -27,15 +28,15 @@
                 <div class="login-form row border rounded-4 p-5 shadow box-area">
                     <form action="login_processing.php" method="POST">
                         <div class="header-text text-center">
-                            <h2>Welcome back!</h2>
-                            <p>We are happy to see you</p>
+                            <h1>Đăng nhập</h1>
+                            <p>Chúng tôi rất vui mừng khi được gặp lại bạn!</p>
                         </div>
                         <div class="mb-3">
                             <input type="email" name="Email" id="Email" placeholder="Email" class="form-control form-control-lg bg-light fs-6"
                                 <?php if(isset($_SESSION['login_email'])) echo "value='{$_SESSION['login_email']}'"; ?>>
                         </div>
                         <div class="mb-3">
-                            <input type="password" name="Password" id="Password" placeholder="Password" class="form-control form-control-lg bg-light fs-6"
+                            <input type="password" name="Password" id="Password" placeholder="Mật khẩu" class="form-control form-control-lg bg-light fs-6"
                                 <?php if(isset($_SESSION['login_pass'])) echo "value='{$_SESSION['login_pass']}'"; ?>>
                         </div>
 
@@ -48,10 +49,10 @@
                         <?php }?>
 
                         <div class="mb-3">
-                            <button class="btn btn-lg w-100 bg-primary bg-opacity-10" id="login_btn">Login</button>
+                            <button class="btn btn-lg w-100 bg-primary bg-opacity-10" id="login_btn">Xác nhận</button>
                         </div>
                         <div class="row">
-                            <p>Don't have account? <a href="./register.php">Sign up</a></p>
+                            <p>Bạn chưa có tài khoản? <a href="./register.php">Đăng ký ngay</a></p>
                         </div>
 
                         <?php
