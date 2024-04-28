@@ -44,8 +44,10 @@ switch ($page) {
             <ul id="nav">
                 <li><a href="#">Trang chủ</a></li>
                 <li><a href="#">Các khóa học</a></li>
-                <li><a href="#">Đăng nhập</a></li>
-                <li><a href="#">Đăng kí</a></li>
+                <li><a href="#">Khóa học của tôi</a></li>
+                <li><a href="#">Hồ sơ</a></li>
+                <li><a href="#">Chào username</a></li>
+                <li><a href="#">Đăng xuất</a></li>
             </ul>
             <div class="logo">
                 <img src="./asset/img/logo_dark.svg" alt="logo" class="logo-quizbk">
@@ -59,13 +61,12 @@ switch ($page) {
 
         <!-- Begin Content -->
         <div id="content">
-            <img src="./asset/img/banner.svg" alt="banner" class="background-image">
+            <img src="./asset/img/banner_teacher.svg" alt="banner" class="background-image">
             <div class="about-section">
                 <h2 class="about-heading">Chào mừng đến với QuizBK!</h2>
-                <p class="about-describe">Tham gia với chúng tôi để có thể làm các bài kiểm tra trắc nghiệm để củng cố kiến thức, cải thiện điểm số và đạt được mục tiêu mà bạn mong muốn.</p>
+                <p class="about-describe">Tạo ra những khóa học của riêng bạn để mọi người có thể tham gia. Các khóa học sẽ giúp học sinh, sinh viên củng cố kiến thức và học hỏi nhiều thêm.</p>
                 <div class="buttons">
-                    <a href="#" class="btn">Đăng nhập</a>
-                    <a href="#" class="btn">Đăng ký</a>
+                    <a href="#" class="btn">Tạo khóa học ngay</a>
                 </div>
             </div>
         </div>
