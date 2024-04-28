@@ -32,6 +32,7 @@
             }
             else
                 echo '<checkTID>' . 'False' . '</checkTID>';
+            echo '<CID>' . $row['CID'] . '</CID>';
             echo '<course_name>' . $row['Course_name'] . '</course_name>';
             echo '<description>' . $row['Description'] . '</description>';
             echo '<num_ques>' . $row['Num_ques'] . '</num_ques>';

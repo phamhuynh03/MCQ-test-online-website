@@ -49,6 +49,7 @@
                                     dataType: 'xml',
                                     success: function(data){
                                         $(data).find('course').each(function(){
+                                            var CID = $(this).find('CID').text();
                                             var course_name = $(this).find('course_name').text();
                                             var description = $(this).find('description').text();
                                             var num_ques = $(this).find('num_ques').text();
@@ -67,7 +68,7 @@
                                                                     + ' <div class="card-footer">'
                                                                         + '<a href="#" class="btn btn-md bg-primary bg-opacity-25 float-end m-1">Xóa</a>'
                                                                         + '<a href="#" class="btn btn-md bg-primary bg-opacity-25 float-end m-1">Chỉnh sửa</a>'
-                                                                        + '<a href="#" class="btn btn-md bg-primary bg-opacity-25 float-end m-1">Làm bài</a>'
+                                                                        + '<a href="./exam.php?name=' + course_name + '&cid=' + CID + '&nq=' + num_ques + '&qid=1" class="btn btn-md bg-primary bg-opacity-25 float-end m-1">Làm bài</a>'
                                                                     + '</div>' 
                                                                 + '</div>' 
                                                             + '</div>';
