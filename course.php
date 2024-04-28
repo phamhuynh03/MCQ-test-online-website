@@ -56,6 +56,7 @@
                                     dataType: 'xml',
                                     success: function(data){
                                         $(data).find('course').each(function(){
+                                            var checkTID = $(this).find('checkTID').text();
                                             var course_name = $(this).find('course_name').text();
                                             var description = $(this).find('description').text();
                                             var num_ques = $(this).find('num_ques').text();
@@ -71,8 +72,12 @@
                                                                         + '<h6 class="card-text lh-sm text-dark">Giảng viên: ' + teacher + '</h6>'
                                                                         + '<h6 class="card-text lh-sm text-dark">' + school + '</h6>'
                                                                     + '</div>'
-                                                                    + ' <div class="card-footer">' 
-                                                                        + '<a href="#" class="btn btn-md bg-primary bg-opacity-25 float-end">Làm bài</a>'
+                                                                    + ' <div class="card-footer">';
+                                                        if(checkTID == 'True'){
+                                                            courseHTML += '<a href="#" class="btn btn-md bg-primary bg-opacity-25 float-end m-1">Xóa</a>'
+                                                                        + '<a href="#" class="btn btn-md bg-primary bg-opacity-25 float-end m-1">Chỉnh sửa</a>';
+                                                        }
+                                                            courseHTML += '<a href="#" class="btn btn-md bg-primary bg-opacity-25 float-end m-1">Làm bài</a>'
                                                                     + '</div>' 
                                                                 + '</div>' 
                                                             + '</div>';

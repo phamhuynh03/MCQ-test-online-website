@@ -8,15 +8,12 @@
     } 
     
     $course = $_SESSION['Course_search'];
-    $school = $_SESSION['School_search'];
-    $teacher = $_SESSION['Teacher_search'];
     $tid = $_SESSION['TID'];
 
     $sql = "SELECT course.*, teacher.First_name, teacher.Last_name, teacher.School 
             FROM course JOIN teacher 
             ON course.TID = teacher.TID 
-            WHERE course.Course_name LIKE '%$course%' AND teacher.School LIKE '%$school%' 
-            AND CONCAT(teacher.Last_name, ' ', teacher.First_name) LIKE '%$teacher%'";      
+            WHERE course.Course_name LIKE '%$course%' AND teacher.TID = '$tid'";      
     $result = mysqli_query($conn, $sql); 
     $count = mysqli_num_rows($result);
 
@@ -26,8 +23,6 @@
         echo '<courses>';
         while($row = mysqli_fetch_assoc($result)){
             echo '<course>';
-            if($row['TID'] == $tid)
-                echo '<checkTID>' . 'True' . '</checkTID>';
             echo '<course_name>' . $row['Course_name'] . '</course_name>';
             echo '<description>' . $row['Description'] . '</description>';
             echo '<num_ques>' . $row['Num_ques'] . '</num_ques>';

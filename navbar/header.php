@@ -1,11 +1,13 @@
 <?php
     session_start();
     $username="";
-    if(isset($_SESSION['First_name']) && $_SESSION['First_name']!="")
+    if(isset($_SESSION['TID']) && $_SESSION['First_name']!="")
         $username = $_SESSION['First_name'];
 
-    if($username!="")
+    if($username!=""){
         $logined = "Chào ".$username."!";
+        $tid = $_SESSION['TID'];
+    }
     else
         $logined = "Login";
 ?>

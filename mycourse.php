@@ -19,8 +19,6 @@
         <script>
             $(function(){
                 $("#Course_search").autocomplete({source: './controller/search_course_auto.php'});
-                $("#School_search").autocomplete({source: './controller/search_school_auto.php'});
-                $("#Teacher_search").autocomplete({source: './controller/search_teacher_auto.php'});
             });
         </script>
         <div class="container-fluid px-5 bg-secondary bg-opacity-10 text-white">
@@ -47,7 +45,7 @@
                         <script>
                             $(document).ready(function(){
                                 $.ajax({
-                                    url: './controller/get_course.php',
+                                    url: './controller/get_mycourse.php',
                                     dataType: 'xml',
                                     success: function(data){
                                         $(data).find('course').each(function(){
@@ -66,8 +64,10 @@
                                                                         + '<h6 class="card-text lh-sm text-dark">Giảng viên: ' + teacher + '</h6>'
                                                                         + '<h6 class="card-text lh-sm text-dark">' + school + '</h6>'
                                                                     + '</div>'
-                                                                    + ' <div class="card-footer">' 
-                                                                        + '<a href="#" class="btn btn-md bg-primary bg-opacity-25 float-end">Làm bài</a>'
+                                                                    + ' <div class="card-footer">'
+                                                                        + '<a href="#" class="btn btn-md bg-primary bg-opacity-25 float-end m-1">Xóa</a>'
+                                                                        + '<a href="#" class="btn btn-md bg-primary bg-opacity-25 float-end m-1">Chỉnh sửa</a>'
+                                                                        + '<a href="#" class="btn btn-md bg-primary bg-opacity-25 float-end m-1">Làm bài</a>'
                                                                     + '</div>' 
                                                                 + '</div>' 
                                                             + '</div>';

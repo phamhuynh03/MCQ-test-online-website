@@ -22,6 +22,7 @@
     
     if($count == 1 && password_verify($password, $row['Password'])){
         $_SESSION['First_name'] = $row['First_name'];
+        $_SESSION['TID'] = (string)$row['TID'];
         setcookie("user", $row['Email'], time() + (86400 * 30), "/");
         header("Location: ../index.php");
     }
