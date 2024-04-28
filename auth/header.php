@@ -1,7 +1,7 @@
 <?php
     session_start();
     $username="";
-    if(isset($_SESSION['First_name']) && $_SESSION['First_name']!="")
+    if(isset($_SESSION['Email']) && $_SESSION['Email']!="")
         $username = $_SESSION['First_name'];
 
     if($username!="")
@@ -13,7 +13,7 @@
 <header>
     <nav class="navbar navbar-expand-sm sticky-top bg-dark">
         <div class="container-fluid">
-            <img src="./asset/img/logo_dark.svg" alt="QuizBK" title="QuizBK">
+            <img src="../asset/img/logo_dark.svg" alt="QuizBK" title="QuizBK">
             <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -66,9 +66,6 @@
     <?php
         if(isset($_GET['page'])){
             $page = $_GET['page'];
-            $_SESSION['Course_search'] = "";
-            $_SESSION['School_search'] = "";
-            $_SESSION['Teacher_search'] = "";
             header("Location: $page.php");
         }
     ?>

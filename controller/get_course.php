@@ -1,14 +1,22 @@
 <?php
     session_start();
-    $conn = mysqli_connect("localhost", "root", '', "assignment");
+    $conn = mysqli_connect("localhost", "root", "", "assignment");
 
     if(mysqli_connect_errno()){
         echo "Failed to connect: ".mysqli_connect_error();
         exit();
     } 
     
-    $sql = "SELECT course.*, teacher.First_name, teacher.Last_name, teacher.School FROM course JOIN teacher ON course.TID = teacher.TID";
-    $result = mysqli_query($conn, $sql);   
+    $course = $_SESSION['Course_search'];
+    $school = $_SESSION['School_search'];
+    $teacher = $_SESSION['Teacher_search'];
+
+    $sql = "SELECT course.*, teacher.First_name, teacher.Last_name, teacher.School 
+            FROM course JOIN teacher 
+            ON course.TID = teacher.TID 
+            WHERE course.Course_name LIKE '%$course%' AND teacher.School LIKE '%$school%' 
+            AND CONCAT(teacher.Last_name, ' ', teacher.First_name) LIKE '%$teacher%'";      
+    $result = mysqli_query($conn, $sql); 
     $count = mysqli_num_rows($result);
 
     if($count > 0){
