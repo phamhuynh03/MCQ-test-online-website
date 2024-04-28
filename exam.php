@@ -18,7 +18,6 @@
         <link rel="stylesheet" href="./asset/css/style.css">
     </head>
     <body>
-        <?php include('./navbar/header.php'); ?>
 
         <div class="container-fluid px-5 py-4">
             <h1 class="text-primary">Bài kiểm tra - <?php echo $course; ?></h1>

@@ -18,11 +18,11 @@
         </div>
         <script>
             $(function(){
-                $("#Course_search").autocomplete({source: './controller/search_course_auto.php'});
+                $("#Course_search").autocomplete({source: './controller/search_mycourse_auto.php'});
             });
         </script>
         <div class="container-fluid px-5 bg-secondary bg-opacity-10 text-white">
-            <form action="./controller/search_processing.php" method="POST">
+            <form action="./controller/search_my_processing.php" method="POST">
                 <div class="row row-cols-1 px-5 py-2 ms-1">
                     <div class="col-xl-3 ps-2 py-1">
                         <input class="form-control" type="Search" name="Course_search" id="Course_search" placeholder="Khóa học" aria-label="Course_search"
@@ -68,16 +68,13 @@
                                                                     + ' <div class="card-footer">'
                                                                         + '<a href="#" class="btn btn-md bg-primary bg-opacity-25 float-end m-1">Xóa</a>'
                                                                         + '<a href="#" class="btn btn-md bg-primary bg-opacity-25 float-end m-1">Chỉnh sửa</a>'
+                                                                        + '<a href="#" class="btn btn-md bg-primary bg-opacity-25 float-end m-1">Xuất</a>'
                                                                         + '<a href="./exam.php?name=' + course_name + '&cid=' + CID + '&nq=' + num_ques + '&qid=1" class="btn btn-md bg-primary bg-opacity-25 float-end m-1">Làm bài</a>'
                                                                     + '</div>' 
                                                                 + '</div>' 
                                                             + '</div>';
                                             $('#course-list').append(courseHTML);
                                         });
-                                    },
-                                    error: function(xhr, status, error) {
-                                        console.error("Error fetching courses:", error);
-                                        $('#course-error').append('<li>Error fetching courses. Please try again later.</li>');
                                     }
                                 });
                             });

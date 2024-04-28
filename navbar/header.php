@@ -71,6 +71,7 @@
             $_SESSION['Course_search'] = "";
             $_SESSION['School_search'] = "";
             $_SESSION['Teacher_search'] = "";
+            unset($_SESSION['Check']);
             header("Location: $page.php");
         }
     ?>
