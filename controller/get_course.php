@@ -10,7 +10,6 @@
     $course = $_SESSION['Course_search'];
     $school = $_SESSION['School_search'];
     $teacher = $_SESSION['Teacher_search'];
-    $tid = $_SESSION['TID'];
 
     $sql = "SELECT course.*, teacher.First_name, teacher.Last_name, teacher.School 
             FROM course JOIN teacher 
@@ -26,8 +25,13 @@
         echo '<courses>';
         while($row = mysqli_fetch_assoc($result)){
             echo '<course>';
-            if($row['TID'] == $tid)
-                echo '<checkTID>' . 'True' . '</checkTID>';
+            if(isset($_SESSION['TID'])){
+                $tid = $_SESSION['TID'];
+                if($row['TID'] == $tid)
+                    echo '<checkTID>' . 'True' . '</checkTID>';
+            }
+            else
+                echo '<checkTID>' . 'False' . '</checkTID>';
             echo '<course_name>' . $row['Course_name'] . '</course_name>';
             echo '<description>' . $row['Description'] . '</description>';
             echo '<num_ques>' . $row['Num_ques'] . '</num_ques>';
