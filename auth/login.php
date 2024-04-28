@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Login</title>
+        <title>Đăng nhập</title>
         <meta name="viewport" charset="utf-8">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
@@ -98,4 +98,32 @@
             </div>
         </div>
     </body>
+    <footer class="footer py-2">
+        <div class="container bg-white">
+            <div class="row align-items-center">
+                <div class="col">
+                    <div class="footer-logo-wrapper text-center text-start">
+                        <img src="../asset/img/logo_light.svg" alt="QuizBK" title="QuizBK">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="container bg-white">
+                        <div class="footer-copyright-wrapper text-center">
+                            &copy; 2024. All Rights Reserved.
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <ul class="nav justify-content-center justify-content-end">
+                        <li class="nav-item">
+                            <a class="nav-link link-secondary" href="https://github.com/phamhuynh03/MCQ-test-online-website">Liên hệ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link link-secondary" href="https://forms.gle/ECY1mcd2bYUtwokEA">Báo cáo</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
 </html>
