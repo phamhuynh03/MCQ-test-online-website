@@ -14,7 +14,7 @@
     $sql = "SELECT * FROM question WHERE CID = '$course_id'";      
     $result = mysqli_query($conn, $sql); 
     $count = mysqli_num_rows($result);
-
+    
     if($count > 0){
         file_put_contents('quiz.xml', '');
         $xml = new DOMDocument('1.0', 'UTF-8');

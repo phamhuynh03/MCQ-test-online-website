@@ -2,146 +2,86 @@
 <questions>
   <question>
     <QID>1</QID>
-    <QIDreal>1</QIDreal>
-    <topic>Giới thiệu</topic>
-    <content>PHP là viết tắt của cụm từ nào? (áp dụng từ PHP 3.0 cho đến nay)</content>
-    <img_link>https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/2560px-PHP-logo.svg.png</img_link>
+    <QIDreal>11</QIDreal>
+    <topic>Mô hình phát triển phần mềm</topic>
+    <content>Hình ảnh này đang mô tả mô hình phát triển phần mềm nào?</content>
+    <img_link>https://images.viblo.asia/26474432-60fc-4a26-b34a-8d1d8d8d0a3b.png</img_link>
     <level>Dễ</level>
-    <A>Personality Home Page</A>
-    <B>Hypertext PreProcessor</B>
-    <C>Page Home Personality</C>
-    <D>PreProcessor Hypertext</D>
-    <correct_ans>B</correct_ans>
-    <choosen>B</choosen>
+    <A>Mô hình Incremental</A>
+    <B>Mô hình Agile</B>
+    <C>Mô hình Waterfall</C>
+    <D>Mô hình Spiral</D>
+    <correct_ans>C</correct_ans>
+    <choosen> </choosen>
   </question>
   <question>
     <QID>2</QID>
-    <QIDreal>2</QIDreal>
-    <topic>Giới thiệu</topic>
-    <content>Phần mở rộng của tệp tin PHP là gì?</content>
+    <QIDreal>12</QIDreal>
+    <topic>Mô hình phát triển phần mềm</topic>
+    <content>Mô hình Agile chủ yếu dựa trên hai mô hình nào?</content>
     <img_link/>
-    <level>Dễ</level>
-    <A>.php</A>
-    <B>.html</B>
-    <C>.js</C>
-    <D>.xml</D>
-    <correct_ans>A</correct_ans>
-    <choosen>C</choosen>
-  </question>
-  <question>
-    <QID>3</QID>
-    <QIDreal>3</QIDreal>
-    <topic>Cú pháp</topic>
-    <content>Con vật nào được xem là linh vật của ngôn ngữ PHP?</content>
-    <img_link/>
-    <level>Dễ</level>
-    <A>Voi</A>
-    <B>Cáo</B>
-    <C>Gà trống</C>
-    <D>Rắn</D>
+    <level>Vừa</level>
+    <A>Iterative và Incremental</A>
+    <B>Iterative và Waterfall</B>
+    <C>Spiral và Incremental</C>
+    <D>Spiral và Waterfall</D>
     <correct_ans>A</correct_ans>
     <choosen> </choosen>
   </question>
   <question>
-    <QID>4</QID>
-    <QIDreal>4</QIDreal>
-    <topic>Cú pháp</topic>
-    <content>Trong quy ước viết code PHP, để kết thúc dòng lệnh, ta sử dụng ký hiệu nào?</content>
+    <QID>3</QID>
+    <QIDreal>13</QIDreal>
+    <topic>Mô hình phát triển phần mềm</topic>
+    <content>Đâu không phải là ưu điểm của mô hình Spiral?</content>
     <img_link/>
+    <level>Khó</level>
+    <A>Ứng dụng tốt với các dự án lớn và quan trọng</A>
+    <B>Luôn có thời gian cho khách hàng phản hồi về sản phẩm</B>
+    <C>Chức năng bổ sung và thay đổi có thể được thêm vào những giai đoạn sau</C>
+    <D>Tài liệu cho dự án thường rất ngắn gọn vì có ít các giai đoạn trung gian</D>
+    <correct_ans>D</correct_ans>
+    <choosen> </choosen>
+  </question>
+  <question>
+    <QID>4</QID>
+    <QIDreal>14</QIDreal>
+    <topic>Sơ đồ</topic>
+    <content>Tên gọi bằng tiếng Anh của sơ đồ dưới đây là gì?</content>
+    <img_link>https://creately.com/static/assets/guides/sequence-diagram-tutorial/image15.webp</img_link>
     <level>Dễ</level>
-    <A>.</A>
-    <B>;</B>
-    <C>:</C>
-    <D>}</D>
+    <A>Use-case diagram</A>
+    <B>Sequence diagram</B>
+    <C>Class diagram</C>
+    <D>Activity diagram</D>
     <correct_ans>B</correct_ans>
     <choosen> </choosen>
   </question>
   <question>
     <QID>5</QID>
-    <QIDreal>5</QIDreal>
-    <topic>Cú pháp</topic>
-    <content>Cách chú thích trong PHP khác với cách chú thích của ngôn ngữ nào sau đây?</content>
+    <QIDreal>15</QIDreal>
+    <topic>Sơ đồ</topic>
+    <content>Tên của mỗi use-case trong Use-case diagram phải được đặt bằng?</content>
     <img_link/>
-    <level>Dễ</level>
-    <A>Python</A>
-    <B>C</B>
-    <C>C++</C>
-    <D>JavaScript</D>
-    <correct_ans>A</correct_ans>
-    <choosen>C</choosen>
+    <level>Vừa</level>
+    <A>Danh từ</A>
+    <B>Danh từ hoặc cụm danh từ</B>
+    <C>Động từ hoặc danh từ</C>
+    <D>Động từ hoặc cụm động từ</D>
+    <correct_ans>D</correct_ans>
+    <choosen> </choosen>
   </question>
   <question>
     <QID>6</QID>
-    <QIDreal>6</QIDreal>
-    <topic>Cú pháp</topic>
-    <content>Dòng kết quả đầu tiên sau khi chạy đoạn mã bên dưới là gì:</content>
-    <img_link>https://devpro.edu.vn/public/uploads/images/blog/cu-phap-bien-du-lieu-trong-php-10.jpg</img_link>
-    <level>Dễ</level>
-    <A>Xin chào!</A>
-    <B>Xin Chào!</B>
-    <C>Xin Chào</C>
-    <D>Xin chào</D>
-    <correct_ans>C</correct_ans>
-    <choosen>B</choosen>
-  </question>
-  <question>
-    <QID>7</QID>
-    <QIDreal>7</QIDreal>
-    <topic>Cú pháp</topic>
-    <content>Đâu là biến trong đoạn code bên dưới?</content>
-    <img_link>https://devpro.edu.vn/public/uploads/images/blog/cu-phap-bien-du-lieu-trong-php-10.jpg</img_link>
-    <level>Dễ</level>
-    <A>echo</A>
-    <B>php</B>
-    <C>br</C>
-    <D>name</D>
-    <correct_ans>D</correct_ans>
-    <choosen> </choosen>
-  </question>
-  <question>
-    <QID>8</QID>
-    <QIDreal>8</QIDreal>
-    <topic>Câu lệnh</topic>
-    <content>Cú pháp nào sau đây dùng để tạo một hàm có tên myFunction?</content>
-    <img_link/>
-    <level>Vừa</level>
-    <A>func myFunc() {}</A>
-    <B>function myFunc()</B>
-    <C>func myFunction()</C>
-    <D>function myFunction()</D>
-    <correct_ans>D</correct_ans>
-    <choosen> </choosen>
-  </question>
-  <question>
-    <QID>9</QID>
-    <QIDreal>9</QIDreal>
-    <topic>Câu lệnh</topic>
-    <content>Cho đoạn mã sau:&#13;
-$a = 12; $b = 10;&#13;
-if ($a == $b) {echo "Yes";} &#13;
-else {echo "No";}&#13;
-Phát biểu nào sau đây là đúng</content>
-    <img_link>https://static.javatpoint.com/phppages/images/if1.png</img_link>
-    <level>Vừa</level>
-    <A>Output của đoạn code là: Yes</A>
-    <B>Output của đoạn code là: No</B>
-    <C>Đoạn code trên có lỗi</C>
-    <D>Output là rỗng</D>
-    <correct_ans>A</correct_ans>
-    <choosen>A</choosen>
-  </question>
-  <question>
-    <QID>10</QID>
-    <QIDreal>10</QIDreal>
-    <topic>Câu lệnh</topic>
-    <content>Trong PHP không có vòng lặp nào sau đây?</content>
-    <img_link/>
+    <QIDreal>16</QIDreal>
+    <topic>Sơ đồ</topic>
+    <content>Trong class diagram, kí hiệu bên dưới đây có ý nghĩa gì?</content>
+    <img_link>https://cdn.codegym.vn/wp-content/uploads/2022/02/cach-doc-uml-class-diagram-7-1.png</img_link>
     <level>Khó</level>
-    <A>do while</A>
-    <B>for</B>
-    <C>foreach</C>
-    <D>repeat until</D>
-    <correct_ans>D</correct_ans>
-    <choosen>A</choosen>
+    <A>sự liên hợp (association)</A>
+    <B>sự phụ thuộc (dependency)</B>
+    <C>sự tổ hợp (composition)</C>
+    <D>sự tụ tập (aggregation)</D>
+    <correct_ans>C</correct_ans>
+    <choosen> </choosen>
   </question>
 </questions>

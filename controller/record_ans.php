@@ -19,7 +19,7 @@
     foreach($questions as $question){
         $QID = $question->getElementsByTagName('QID')->item(0)->nodeValue;
 
-        if($QID == $question_id) {
+        if($QID == $question_id){
             $choosenElement = $question->getElementsByTagName('choosen')->item(0);
             $newElement = $xml->createElement('choosen', $ans);
             $choosenElement->parentNode->replaceChild($newElement, $choosenElement);    

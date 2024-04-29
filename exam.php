@@ -51,7 +51,7 @@
                         </script>
                     </div>
                     <div>
-                        <a class="nav-link text-dark bg-primary bg-opacity-25 p-1 my-2 float-end rounded" href="./controller/submit.php">Nộp bài</a>
+                        <a class="nav-link text-dark bg-primary bg-opacity-25 p-1 my-2 float-end rounded" href="./result.php?name=<?php echo $course; ?>&cid=<?php echo $course_id; ?>&nq=<?php echo $num_ques; ?>">Nộp bài</a>
                     </div>
                     <hr class="d-sm-none">
                 </div>
