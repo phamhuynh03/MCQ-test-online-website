@@ -27,14 +27,31 @@
                 <div class="col-sm-3 p-3">
                     <h5 class="text-primary">Câu hỏi</h5>
                     <p class="text-dark">Bài kiểm tra có <?php echo $num_ques; ?> câu hỏi</p>
-                    <div class="row row-cols-6 row-cols-xl-6 row-cols-lg-4 row-cols-md-3 row-cols-sm-2">
-                        <?php
-                            for($i = 1; $i <= $num_ques; $i++){?>
-                                <div class="col">
-                                    <a class="nav-link text-dark text-center bg-primary bg-opacity-25 p-1 my-1" href="./exam.php?name=<?php echo $course; ?>&cid=<?php echo $course_id; ?>&nq=<?php echo $num_ques; ?>&qid=<?php echo $i; ?>"><?php echo $i; ?></a>
-                                </div>
-                            <?php }
-                        ?>
+                    <div class="row row-cols-6 row-cols-xl-6 row-cols-lg-4 row-cols-md-3 row-cols-sm-2" id="ques-list">
+                        <script>
+                            $(document).ready(function(){
+                                $.ajax({
+                                    url: './controller/quiz.xml',
+                                    dataType: 'xml',
+                                    success: function(data){
+                                        $(data).find('question').each(function(){
+                                            var QID = $(this).find('QID').text();
+                                            var choosen = $(this).find('choosen').text();
+                                            if(choosen == 'A' || choosen == 'B' || choosen == 'C' || choosen == 'D')
+                                                var item_ques = '<a class="nav-link text-white text-center bg-primary p-1 my-1 rounded" href="./exam.php?name=<?php echo $course; ?>&cid=<?php echo $course_id; ?>&nq=<?php echo $num_ques; ?>&qid=' + QID + '">' + QID + '</a>';
+                                            else
+                                                var item_ques = '<a class="nav-link text-dark text-center bg-primary bg-opacity-10 p-1 my-1 rounded" href="./exam.php?name=<?php echo $course; ?>&cid=<?php echo $course_id; ?>&nq=<?php echo $num_ques; ?>&qid=' + QID + '">' + QID + '</a>';
+                                            
+                                            var queslistHTML = '<div class="col">' + item_ques + '</div>';
+                                            $('#ques-list').append(queslistHTML);
+                                        });
+                                    }
+                                });
+                            });
+                        </script>
+                    </div>
+                    <div>
+                        <a class="nav-link text-dark bg-primary bg-opacity-25 p-1 my-2 float-end rounded" href="./controller/submit.php">Nộp bài</a>
                     </div>
                     <hr class="d-sm-none">
                 </div>
@@ -42,7 +59,7 @@
                     <script>
                         $(document).ready(function(){
                             $.ajax({
-                                url: './controller/get_question.php?cid=<?php echo $course_id; ?>',
+                                url: './controller/quiz.xml',
                                 dataType: 'xml',
                                 success: function(data){
                                     $(data).find('question').each(function(){
@@ -50,15 +67,36 @@
                                         var topic = $(this).find('topic').text();
                                         var content = $(this).find('content').text();
                                         var img_link = $(this).find('img_link').text();
-                                        var level = $(this).find('teacher').text();
+                                        var level = $(this).find('level').text();
                                         var A = $(this).find('A').text();
                                         var B = $(this).find('B').text();
                                         var C = $(this).find('C').text();
                                         var D = $(this).find('D').text();
                                         var correct_ans = $(this).find('correct_ans').text();
+                                        var choosen = $(this).find('choosen').text();
                                         if(QID == <?php echo $question_id; ?>){
+                                            if(choosen == 'A')
+                                                var A_ans = '<a class="nav-link text-white bg-primary my-2" href="./controller/record_ans.php?name=<?php echo $course; ?>&cid=<?php echo $course_id; ?>&nq=<?php echo $num_ques; ?>&qid=' + QID + '&ans=A">A. ' + A + '</a>';
+                                            else
+                                                var A_ans = '<a class="nav-link text-dark bg-primary bg-opacity-10 my-2" href="./controller/record_ans.php?name=<?php echo $course; ?>&cid=<?php echo $course_id; ?>&nq=<?php echo $num_ques; ?>&qid=' + QID + '&ans=A">A. ' + A + '</a>';
+                                            if(choosen == 'B')
+                                                var B_ans = '<a class="nav-link text-white bg-primary my-2" href="./controller/record_ans.php?name=<?php echo $course; ?>&cid=<?php echo $course_id; ?>&nq=<?php echo $num_ques; ?>&qid=' + QID + '&ans=B">B. ' + B + '</a>';
+                                            else
+                                                var B_ans = '<a class="nav-link text-dark bg-primary bg-opacity-10 my-2" href="./controller/record_ans.php?name=<?php echo $course; ?>&cid=<?php echo $course_id; ?>&nq=<?php echo $num_ques; ?>&qid=' + QID + '&ans=B">B. ' + B + '</a>';
+                                            if(choosen == 'C')
+                                                var C_ans = '<a class="nav-link text-white bg-primary my-2" href="./controller/record_ans.php?name=<?php echo $course; ?>&cid=<?php echo $course_id; ?>&nq=<?php echo $num_ques; ?>&qid=' + QID + '&ans=C">C. ' + C + '</a>';
+                                            else
+                                                var C_ans = '<a class="nav-link text-dark bg-primary bg-opacity-10 my-2" href="./controller/record_ans.php?name=<?php echo $course; ?>&cid=<?php echo $course_id; ?>&nq=<?php echo $num_ques; ?>&qid=' + QID + '&ans=C">C. ' + C + '</a>';
+                                            if(choosen == 'D')
+                                                var D_ans = '<a class="nav-link text-white bg-primary my-2" href="./controller/record_ans.php?name=<?php echo $course; ?>&cid=<?php echo $course_id; ?>&nq=<?php echo $num_ques; ?>&qid=' + QID + '&ans=D">D. ' + D + '</a>';
+                                            else
+                                                var D_ans = '<a class="nav-link text-dark bg-primary bg-opacity-10 my-2" href="./controller/record_ans.php?name=<?php echo $course; ?>&cid=<?php echo $course_id; ?>&nq=<?php echo $num_ques; ?>&qid=' + QID + '&ans=D">D. ' + D + '</a>';
+                                        
                                             var questionHTML = '<h2 class="text-primary">Câu hỏi số ' + QID + '</h2>'
-                                                            + '<p class="text-dark">' + content + '</p>';
+                                                            + '<h6 class="text-dark">Chủ đề: ' + topic + ' - Mức độ: ' + level + '</h6>'
+                                                            + '<br>'
+                                                            + '<p class="text-dark">' + content + '</p>'
+                                                            + '<br>';
                                             if(img_link != ''){
                                                 questionHTML += '<div class="text-center">'
                                                                     + '<img src="' + img_link + '" alt="Câu hỏi số ' + QID + '" title="Câu hỏi số ' + QID + '" width="50%" height="50%">'
@@ -66,18 +104,10 @@
                                             }
                                                 questionHTML += '<h4 class="text-primary">Đáp án</h4>'
                                                             + '<ul class="nav nav-pills flex-column">'
-                                                                + '<li class="nav-item">'
-                                                                    + '<a class="nav-link text-dark bg-primary bg-opacity-10 my-2" href="#">A. ' + A + '</a>'
-                                                                + '</li>'
-                                                                + '<li class="nav-item">'
-                                                                    + '<a class="nav-link text-dark bg-primary bg-opacity-10 my-2" href="#">B. ' + B + '</a>'
-                                                                + '</li>'
-                                                                + '<li class="nav-item">'
-                                                                    + '<a class="nav-link text-dark bg-primary bg-opacity-10 my-2" href="#">C. ' + C + '</a>'
-                                                                + '</li>'
-                                                                + '<li class="nav-item">'
-                                                                    + '<a class="nav-link text-dark bg-primary bg-opacity-10 my-2" href="#">D. ' + D + '</a>'
-                                                                + '</li>'
+                                                                + '<li class="nav-item">' + A_ans + '</li>'
+                                                                + '<li class="nav-item">' + B_ans + '</li>'
+                                                                + '<li class="nav-item">' + C_ans + '</li>'
+                                                                + '<li class="nav-item">' + D_ans + '</li>'
                                                             + '</ul>';
                                             $('#main-ques').append(questionHTML);
                                         }

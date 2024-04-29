@@ -79,7 +79,7 @@
                                                                         + '<a href="#" class="btn btn-md bg-primary bg-opacity-25 float-end m-1">Chỉnh sửa</a>'
                                                                         + '<a href="#" class="btn btn-md bg-primary bg-opacity-25 float-end m-1">Xuất</a>';
                                                         }
-                                                            courseHTML += '<a href="./exam.php?name=' + course_name + '&cid=' + CID + '&nq=' + num_ques + '&qid=1" class="btn btn-md bg-primary bg-opacity-25 float-end m-1">Làm bài</a>'
+                                                            courseHTML += '<a href="./controller/create_queslist.php?name=' + course_name + '&cid=' + CID + '&nq=' + num_ques + '" class="btn btn-md bg-primary bg-opacity-25 float-end m-1">Làm bài</a>'
                                                                     + '</div>' 
                                                                 + '</div>' 
                                                             + '</div>';
