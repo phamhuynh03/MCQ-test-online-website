@@ -52,8 +52,8 @@
         $ans=$_POST['ans'.$i.''];
         $level=$_POST['level'.$i.''];
             
-        $sql = "INSERT INTO question (Topic,Content,Img_link, A, B, C, D, Correct_ans, Level) 
-        VALUES ('$topic', '$question', '$imglink', '$a', '$b', '$c', '$d','$ans','$level')";
+        $sql = "INSERT INTO question (Topic,Content,Img_link, A, B, C, D, Correct_ans, Level,CID) 
+        VALUES ('$topic', '$question', '$imglink', '$a', '$b', '$c', '$d','$ans','$level','$ti')";
         echo $targetFilePath;
         if (mysqli_query($conn, $sql)) {
             header("Location: ../mycourse.php");
