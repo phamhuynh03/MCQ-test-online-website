@@ -32,7 +32,7 @@
                         <button class="btn bg-primary bg-opacity-10" type="Submit"><img src="./asset/img/search.svg"></button>
                     </div>
                     <div class="col-xl-8 pe-4 py-1 text-end">
-                        <a href="index.php" class="btn btn-md bg-primary bg-opacity-25 float-end">Thêm khóa học</a>
+                        <a href="addcourse.php" class="btn btn-md bg-primary bg-opacity-25 float-end">Thêm khóa học</a>
                     </div>
                 </div>
             </form>
