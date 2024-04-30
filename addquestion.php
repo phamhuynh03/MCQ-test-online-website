@@ -98,7 +98,7 @@ echo '<a style="font-weight: bold";>Câu hỏi '.$i.':</a><br />
 <br />
 <a style="font-weight: bold";>Đáp án</a>:<br />
 <select id="ans'.$i.'" name="ans'.$i.'"  class="form-control input-md" >
-   <option value="a">Đáp án đúng</option>
+   <option value="A">Đáp án đúng</option>
   <option value="A">Câu a</option>
   <option value="B">Câu b</option>
   <option value="C">Câu c</option>
