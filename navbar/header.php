@@ -22,19 +22,19 @@
             <div class="collapse navbar-collapse" id="navMenu">
                 <ul class="navbar-nav">
                     <li class="nav-item px-2">
-                        <a class="nav-link text-white" href="index.php?page=index">Trang chủ</a>
+                        <a class="nav-link text-white text-center" href="index.php?page=index">Trang chủ</a>
                     </li>
                     <li class="nav-item px-2">
-                        <a class="nav-link text-white" href="index.php?page=course">Các khóa học</a>
+                        <a class="nav-link text-white text-center" href="index.php?page=course">Các khóa học</a>
                     </li>
 
                     <?php
                         if(isset($logined) && $logined != "Login"){?>
                             <li class="nav-item px-2">
-                                <a class="nav-link text-white" href="index.php?page=mycourse">Khóa học của tôi</a>
+                                <a class="nav-link text-white text-center" href="index.php?page=mycourse">Khóa học của tôi</a>
                             </li>
                             <li class="nav-item px-2">
-                                <a class="nav-link text-white" href="index.php?page=profile">Thông tin cá nhân</a>
+                                <a class="nav-link text-white text-center" href="index.php?page=profile">Thông tin cá nhân</a>
                             </li>
                     <?php }?>
 
@@ -45,18 +45,18 @@
                     <?php
                         if(isset($logined) && $logined != "Login"){?>
                             <li class="nav-item px-2">
-                                <a class="nav-link text-white"><?php echo $logined; ?></a>
+                                <a class="nav-link text-white text-center"><?php echo $logined; ?></a>
                             </li>
                             <li class="nav-item px-2">
-                                <a class="nav-link text-white" href="index.php?page=auth/logout">Đăng xuất</a>
+                                <a class="nav-link text-white text-center" href="index.php?page=auth/logout">Đăng xuất</a>
                             </li>
                     <?php }
                         else{?>
                             <li class="nav-item px-2">
-                                <a class="nav-link text-white" href="index.php?page=auth/login">Đăng nhập</a>
+                                <a class="nav-link text-white text-center" href="index.php?page=auth/login">Đăng nhập</a>
                             </li>
                             <li class="nav-item px-2">
-                                <a class="nav-link text-white" href="index.php?page=auth/register">Đăng ký</a>
+                                <a class="nav-link text-white text-center" href="index.php?page=auth/register">Đăng ký</a>
                             </li>
                     <?php }?>
 

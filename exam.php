@@ -22,7 +22,7 @@
         <div class="container-fluid px-5 py-4">
             <h1 class="text-primary">Bài kiểm tra - <?php echo $course; ?></h1>
         </div>
-        <div class="container-fluid p-5 bg-secondary bg-opacity-10 text-white">
+        <div class="container-fluid p-5 bg-secondary bg-opacity-10 text-primary">
             <div class="row">
                 <div class="col-sm-3 p-3">
                     <h5 class="text-primary">Câu hỏi</h5>
