@@ -42,6 +42,9 @@
                                         <div class="col-md-12">
                                             <textarea rows="3" cols="5" name="qns'.$i.'" class="form-control" placeholder="Nhập câu hỏi"></textarea>
                                         </div>
+                                        <div class="col-md-6">
+                                                <input  type="file" name="fqns'.$i.'" class="form-control input-md">
+                                        </div>
                                     </div>
                                     <br>
                                     <div class="form-group">
