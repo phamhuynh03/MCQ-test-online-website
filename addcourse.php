@@ -38,15 +38,38 @@
                         <div class="form-group">
                             <label class="col-md-12 control-label"></label>  
                             <div class="col-md-12">
-                                <textarea rows="8" cols="8" name="desc" class="form-control" placeholder="Mô tả"></textarea>  
+                                <textarea rows="8" cols="8" id="desc" name="desc" class="form-control" placeholder="Mô tả"></textarea>  
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-md-12 control-label"></label>
                             <div class="d-grid gap-2 col-md-2 col-sm-4 mx-auto">
-                                <button class="btn btn-md bg-primary bg-opacity-25">Xác nhận</button>
+                                <button class="btn btn-md bg-primary bg-opacity-25" id="create_course">Xác nhận</button>
                             </div>
                         </div>
+    
+                        <script>
+                            var log = document.getElementById('create_course');
+
+                            log.addEventListener('click', function(e){
+                                var name = document.getElementById('name').value;  
+                                var total = document.getElementById('total').value;
+                                var desc = document.getElementById('desc').value;
+ 
+                                if(name == ""){  
+                                    alert("Vui lòng nhập tên khóa học!"); 
+                                    e.preventDefault();
+                                }  
+                                else if(total == ""){  
+                                    alert("Vui lòng nhập số lượng câu hỏi!");
+                                    e.preventDefault();
+                                }
+                                else if(total < 1){  
+                                    alert("Số lượng câu hỏi phải lớn hơn 0!");
+                                    e.preventDefault();
+                                }
+                            });
+                        </script>
                     </form>
                 </div>
             </div>

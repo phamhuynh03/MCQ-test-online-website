@@ -3,17 +3,18 @@
     $Num_ques = $_SESSION['Num_ques'] ;
     $targetDir = "uploads/"; 
     $ti = $_SESSION['TID'];
+    $cid = $_GET['cid'];
+
     $conn = mysqli_connect("localhost", "root", "", "assignment");
     if (!$conn) {
         die("Connection failed: " . mysqli_connect_error());
     }
     $topic=$_POST['topic'];
-    for ($i = 1; $i <= $Num_ques; $i++) {
+    for($i = 1; $i <= $Num_ques; $i++){
         $question=$_POST['qns'.$i.''];
         $imglink=$_POST['img'.$i.''];
-        $a=$_POST[$i.'1'];
-        // f'.$i.'1
 
+        $a=$_POST[$i.'1'];
         $filename1='f'.$i .'1';
         if(!empty($_FILES[$filename1]["name"])){
             $fileName = basename($_FILES[$filename1]["name"]); 
@@ -53,15 +54,12 @@
         $level=$_POST['level'.$i.''];
             
         $sql = "INSERT INTO question (Topic,Content,Img_link, A, B, C, D, Correct_ans, Level,CID) 
-        VALUES ('$topic', '$question', '$imglink', '$a', '$b', '$c', '$d','$ans','$level','$ti')";
+        VALUES ('$topic', '$question', '$imglink', '$a', '$b', '$c', '$d','$ans','$level','$cid')";
         echo $targetFilePath;
-        if (mysqli_query($conn, $sql)) {
+        if(mysqli_query($conn, $sql))
             header("Location: ../mycourse.php");
-        } else {
+        else
             echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-        }
-
     }
     mysqli_close($conn);
-
 ?>

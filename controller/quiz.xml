@@ -2,86 +2,16 @@
 <questions>
   <question>
     <QID>1</QID>
-    <QIDreal>11</QIDreal>
-    <topic>Mô hình phát triển phần mềm</topic>
-    <content>Hình ảnh này đang mô tả mô hình phát triển phần mềm nào?</content>
-    <img_link>https://images.viblo.asia/26474432-60fc-4a26-b34a-8d1d8d8d0a3b.png</img_link>
-    <level>Dễ</level>
-    <A>Mô hình Incremental</A>
-    <B>Mô hình Agile</B>
-    <C>Mô hình Waterfall</C>
-    <D>Mô hình Spiral</D>
-    <correct_ans>C</correct_ans>
-    <choosen> </choosen>
-  </question>
-  <question>
-    <QID>2</QID>
-    <QIDreal>12</QIDreal>
-    <topic>Mô hình phát triển phần mềm</topic>
-    <content>Mô hình Agile chủ yếu dựa trên hai mô hình nào?</content>
-    <img_link/>
+    <QIDreal>68</QIDreal>
+    <topic>111</topic>
+    <content>2-1</content>
+    <img_link>data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAA2FBMVEX///93e7MAAABITImustV4fLR0ebI0NDSPksBzd7GHh4dGSohxdbDx8vessNRydrFwdKe7u7tzd6lrb6Nsca6dnZ329vZJSUlbW1tkaJ5fY5p5eXlOUo4+QoSDh7pUWJI3PIHPz8/k5e+9vb2JjbykqM7t7fTW1+fj4+OlpaWdoch6fq+XmsSXl5fc3Ny5u9ZRUVE9PT3HyN5oaGgPDw8uLi6Ji68ZGRmMjIwyN3+srKzZ2ulubm7DxuDJy+CBhbOdn72ytMp4eqV1eKOWmLlkaaqDhq2rrMYh5p/mAAARPElEQVR4nO2dfVvaShOHl6OJRBJFiVEQAkQIClgq9aWVCtp66vf/Rs/MJkB2Nm+8aD3Ptb+/erWumzszOzs7u9kypqSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpK</img_link>
     <level>Vừa</level>
-    <A>Iterative và Incremental</A>
-    <B>Iterative và Waterfall</B>
-    <C>Spiral và Incremental</C>
-    <D>Spiral và Waterfall</D>
+    <A>1</A>
+    <B>2</B>
+    <C>3</C>
+    <D>4</D>
     <correct_ans>A</correct_ans>
-    <choosen> </choosen>
-  </question>
-  <question>
-    <QID>3</QID>
-    <QIDreal>13</QIDreal>
-    <topic>Mô hình phát triển phần mềm</topic>
-    <content>Đâu không phải là ưu điểm của mô hình Spiral?</content>
-    <img_link/>
-    <level>Khó</level>
-    <A>Ứng dụng tốt với các dự án lớn và quan trọng</A>
-    <B>Luôn có thời gian cho khách hàng phản hồi về sản phẩm</B>
-    <C>Chức năng bổ sung và thay đổi có thể được thêm vào những giai đoạn sau</C>
-    <D>Tài liệu cho dự án thường rất ngắn gọn vì có ít các giai đoạn trung gian</D>
-    <correct_ans>D</correct_ans>
-    <choosen> </choosen>
-  </question>
-  <question>
-    <QID>4</QID>
-    <QIDreal>14</QIDreal>
-    <topic>Sơ đồ</topic>
-    <content>Tên gọi bằng tiếng Anh của sơ đồ dưới đây là gì?</content>
-    <img_link>https://creately.com/static/assets/guides/sequence-diagram-tutorial/image15.webp</img_link>
-    <level>Dễ</level>
-    <A>Use-case diagram</A>
-    <B>Sequence diagram</B>
-    <C>Class diagram</C>
-    <D>Activity diagram</D>
-    <correct_ans>B</correct_ans>
-    <choosen> </choosen>
-  </question>
-  <question>
-    <QID>5</QID>
-    <QIDreal>15</QIDreal>
-    <topic>Sơ đồ</topic>
-    <content>Tên của mỗi use-case trong Use-case diagram phải được đặt bằng?</content>
-    <img_link/>
-    <level>Vừa</level>
-    <A>Danh từ</A>
-    <B>Danh từ hoặc cụm danh từ</B>
-    <C>Động từ hoặc danh từ</C>
-    <D>Động từ hoặc cụm động từ</D>
-    <correct_ans>D</correct_ans>
-    <choosen> </choosen>
-  </question>
-  <question>
-    <QID>6</QID>
-    <QIDreal>16</QIDreal>
-    <topic>Sơ đồ</topic>
-    <content>Trong class diagram, kí hiệu bên dưới đây có ý nghĩa gì?</content>
-    <img_link>https://cdn.codegym.vn/wp-content/uploads/2022/02/cach-doc-uml-class-diagram-7-1.png</img_link>
-    <level>Khó</level>
-    <A>sự liên hợp (association)</A>
-    <B>sự phụ thuộc (dependency)</B>
-    <C>sự tổ hợp (composition)</C>
-    <D>sự tụ tập (aggregation)</D>
-    <correct_ans>C</correct_ans>
     <choosen> </choosen>
   </question>
 </questions>

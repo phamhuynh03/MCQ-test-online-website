@@ -90,43 +90,43 @@
                                 var check_pass = /^(?=.*[A-Z])[A-Za-z\d@$!%*?&]{8,}$/;
  
                                 if(firstname == ""){  
-                                    alert("Please enter your first name!"); 
+                                    alert("Vui lòng nhập tên của bạn!"); 
                                     e.preventDefault();
                                 }
                                 else if(lastname == ""){  
-                                    alert("Please enter your last name!"); 
+                                    alert("Vui lòng nhập họ và tên đệm của bạn!"); 
                                     e.preventDefault();
                                 }
                                 else if(school == ""){  
-                                    alert("Please enter your school!"); 
+                                    alert("Vui lòng nhập tên trường của bạn!"); 
                                     e.preventDefault();
                                 }   
                                 else if(username == ""){  
-                                    alert("Please enter your email!");
+                                    alert("Vui lòng nhập email của bạn!");
                                     e.preventDefault();
                                 }
                                 else if(!check_email.test(username)){  
-                                    alert("Please enter a valid email address!");
+                                    alert("Vui lòng nhập email hợp lệ!");
                                     e.preventDefault();
                                 }   
                                 else if(password == ""){  
-                                    alert("Please enter your password!");
+                                    alert("Vui lòng nhập mật khẩu của bạn!");
                                     e.preventDefault();
                                 }
                                 else if(password.length < 8){  
-                                    alert("Password must be at least 8 characters!");
+                                    alert("Mật khẩu phải chứa ít nhất 8 ký tự!");
                                     e.preventDefault();
                                 }
                                 else if(!check_pass.test(password)){  
-                                    alert("Password contain at least 1 uppercase letter!");
+                                    alert("Mật khẩu phải chứa ít nhất 1 ký tự in hoa!");
                                     e.preventDefault();
                                 }
                                 else if(confirm_pass == ""){  
-                                    alert("Please confirm your password!");
+                                    alert("Vui lòng nhập mật khẩu xác nhận một lần nữa!");
                                     e.preventDefault();
                                 }
                                 else if(password != confirm_pass){  
-                                    alert("Your password does not match! Please try again!");
+                                    alert("Mật khẩu không khớp! Vui lòng nhập lại!");
                                     e.preventDefault();
                                 }
                             });

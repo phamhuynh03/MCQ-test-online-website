@@ -75,19 +75,19 @@
                                 var check_email = /\S+@\S+\.\S+/;
  
                                 if(username == "" && password == ""){  
-                                    alert("Please enter your email and password!"); 
+                                    alert("Vui lòng nhập email và mật khẩu!"); 
                                     e.preventDefault();
                                 }  
                                 else if(username == ""){  
-                                    alert("Please enter your email!");
+                                    alert("Vui lòng nhập email của bạn!");
                                     e.preventDefault();
                                 }
                                 else if(!check_email.test(username)){  
-                                    alert("Please enter a valid email address!");
+                                    alert("Vui lòng nhập email hợp lệ!");
                                     e.preventDefault();
                                 }   
                                 else if(password == ""){  
-                                    alert("Please enter your password!");
+                                    alert("Vui lòng nhập mật khẩu của bạn!");
                                     e.preventDefault();
                                 }
                             });
