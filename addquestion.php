@@ -42,15 +42,12 @@
                                         <div class="col-md-12">
                                             <textarea rows="3" cols="5" name="qns'.$i.'" class="form-control" placeholder="Nhập câu hỏi"></textarea>
                                         </div>
-                                        <div class="col-md-6">
-                                                <input  type="file" name="fqns'.$i.'" class="form-control input-md">
-                                        </div>
                                     </div>
                                     <br>
                                     <div class="form-group">
                                         <h6>Link hỉnh ảnh (nếu có)</h6>
                                         <div class="col-md-12">
-                                            <textarea rows="1" cols="5" name="img'.$i.'" class="form-control" placeholder="Link hỉnh ảnh"></textarea>  
+                                            <textarea rows="3" cols="5" name="img'.$i.'" class="form-control" placeholder="Link hỉnh ảnh"></textarea>  
                                         </div>
                                     </div>
                                     <br>

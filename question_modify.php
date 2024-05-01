@@ -48,7 +48,7 @@
                         </script>
                     </div>
                     <div>
-                        <a class="nav-link text-dark bg-primary bg-opacity-25 p-1 my-2 float-end rounded" href="./controller/modify_processing.php">Chỉnh sửa</a>
+                        <a class="nav-link text-dark bg-primary bg-opacity-25 p-1 my-2 float-end rounded" href="./controller/modify_processing.php">Lưu lại</a>
                     </div>
                     <hr class="d-sm-none">
                 </div>
@@ -102,16 +102,16 @@
                                         var C = $(this).find('C').text();
                                         var D = $(this).find('D').text();
                                         if(QID == <?php echo $question_id; ?>){
-                                                var A_ans = '<input type="text"  onchange="handleChangeA(' + QID + ')" id="inputA' + QID + '" placeholder="' + A + '"></input>';
-                                                var B_ans = '<input type="text"  onchange="handleChangeB(' + QID + ')" id="inputB' + QID + '" placeholder="' + B + '"></input>';
-                                                var C_ans = '<input type="text"  onchange="handleChangeC(' + QID + ')" id="inputC' + QID + '" placeholder="' + C + '"></input>';
-                                                var D_ans = '<input type="text"  onchange="handleChangeD(' + QID + ')" id="inputD' + QID + '" placeholder="' + D + '"></input>';
+                                                var A_ans = '<h6>Đáp án A</h6><input class="form-control input-md py-2" type="text" onchange="handleChangeA(' + QID + ')" id="inputA' + QID + '" placeholder="' + A + '"></input>';
+                                                var B_ans = '<h6>Đáp án B</h6><input class="form-control input-md py-2" type="text" onchange="handleChangeB(' + QID + ')" id="inputB' + QID + '" placeholder="' + B + '"></input>';
+                                                var C_ans = '<h6>Đáp án C</h6><input class="form-control input-md py-2" type="text" onchange="handleChangeC(' + QID + ')" id="inputC' + QID + '" placeholder="' + C + '"></input>';
+                                                var D_ans = '<h6>Đáp án D</h6><input class="form-control input-md py-2" type="text" onchange="handleChangeD(' + QID + ')" id="inputD' + QID + '" placeholder="' + D + '"></input>';
                                                                                          
                                             var questionHTML = '<h2 class="text-primary">Câu hỏi số ' + QID + '</h2>'
                                                             + '<h6 class="text-dark">Chủ đề: ' + topic + ' - Mức độ: ' + level + '</h6>'
                                                             + '<br>'
                                                             + '<p>Câu hỏi</p>'
-                                                            + '<input type="text" onchange="handleChangeContent(' + QID + ')" id="inputContent' + QID + '" placeholder="' + content + '"></input>'
+                                                            + '<input class="form-control input-md" type="text" onchange="handleChangeContent(' + QID + ')" id="inputContent' + QID + '" placeholder="' + content + '"></input>'
                                                             + '<br>';
                                             if(img_link != ''){
                                                 questionHTML += '<div class="text-center">'
@@ -119,7 +119,10 @@
                                                                 + '</div>';
                                             }
                                                 questionHTML += '<h4 class="text-primary">Đáp án</h4>'
-                                                            + A_ans + B_ans + C_ans + D_ans;
+                                                            + A_ans
+                                                            + B_ans
+                                                            + C_ans
+                                                            + D_ans;
                                             $('#main-ques').append(questionHTML);
                                         }
                                     });
