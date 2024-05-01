@@ -82,7 +82,7 @@
                                                                     + '</div>'
                                                                     + ' <div class="card-footer">'
                                                                         + '<a href="./controller/delete_processing.php?cid=' + CID + '&page=mycourse" class="btn btn-md bg-primary bg-opacity-25 float-end m-1">Xóa</a>'
-                                                                        + '<a href="#" class="btn btn-md bg-primary bg-opacity-25 float-end m-1">Chỉnh sửa</a>'
+                                                                        + '<a href="./controller/create_questionlist_modify.php?name=' + course_name + '&cid=' + CID + '&nq=' + num_ques + '" class="btn btn-md bg-primary bg-opacity-25 float-end m-1">Chỉnh sửa</a>'
                                                                         + '<a href="#" class="btn btn-md bg-primary bg-opacity-25 float-end m-1">Xuất</a>'
                                                                         + '<a href="./controller/create_queslist.php?name=' + course_name + '&cid=' + CID + '&nq=' + num_ques + '" class="btn btn-md bg-primary bg-opacity-25 float-end m-1">Làm bài</a>'
                                                                     + '</div>' 
