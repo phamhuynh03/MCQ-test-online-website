@@ -36,6 +36,7 @@
                                     success: function(data){
                                         $(data).find('question').each(function(){
                                             var QID = $(this).find('QID').text();
+                                            
                                             var choosen = $(this).find('choosen').text();
                                                 var item_ques = '<a class="nav-link text-white text-center bg-primary p-1 my-1 rounded" href="./question_modify.php?name=<?php echo $course; ?>&cid=<?php echo $course_id; ?>&nq=<?php echo $num_ques; ?>&qid=' + QID + '">' + QID + '</a>';
                                             var queslistHTML = '<div class="col">' + item_ques + '</div>';
@@ -53,32 +54,34 @@
                 </div>
                 <div class="col-sm-9 p-3" id="main-ques">
                     <script>
-                        function handleChangeA(event) {
-                        var inputValue = document.getElementById("inputA").value;    // Display the value in the console
+                        
+                        function handleChangeA(qid) {
+                        var inputValue = document.getElementById("inputA" + qid).value;    
                         console.log("The input value has changed to:", inputValue);
-                        var url = "./controller/record_modify.php?name=<?php echo $course; ?>&cid=<?php echo $course_id; ?>&nq=<?php echo $num_ques; ?>&qid=" + 1 + "&ansA="+ inputValue + "&ansB="+"&ansC="+"&ansD="+"&ansContent=";
+                        var url = "./controller/record_modify.php?name=<?php echo $course; ?>&cid=<?php echo $course_id; ?>&nq=<?php echo $num_ques; ?>&qid=" + qid + "&ansA="+ inputValue + "&ansB="+"&ansC="+"&ansD="+"&ansContent=";
                         window.location.href = url;
                         }
-                        function handleChangeB(event) {
-                        var inputValue = document.getElementById("inputB").value;    // Display the value in the console
+                        function handleChangeB(qid) {
+                            
+                        var inputValue = document.getElementById("inputB"+ qid).value;    
                         console.log("The input value has changed to:", inputValue);
-                        var url = "./controller/record_modify.php?name=<?php echo $course; ?>&cid=<?php echo $course_id; ?>&nq=<?php echo $num_ques; ?>&qid=" + 1 + "&ansB="+ inputValue+ "&ansA="+"&ansC="+"&ansD="+"&ansContent=";
+                        var url = "./controller/record_modify.php?name=<?php echo $course; ?>&cid=<?php echo $course_id; ?>&nq=<?php echo $num_ques; ?>&qid=" + qid + "&ansB="+ inputValue+ "&ansA="+"&ansC="+"&ansD="+"&ansContent=";
                         window.location.href = url;
                         }
-                        function handleChangeC(event) {
-                        var inputValue = document.getElementById("inputC").value;    // Display the value in the console
+                        function handleChangeC(qid) {
+                        var inputValue = document.getElementById("inputC"+ qid).value;    
                         console.log("The input value has changed to:", inputValue);
-                        var url = "./controller/record_modify.php?name=<?php echo $course; ?>&cid=<?php echo $course_id; ?>&nq=<?php echo $num_ques; ?>&qid=" + 1 + "&ansC="+ inputValue +"&ansA="+"&ansB="+"&ansD="+"&ansContent=";
+                        var url = "./controller/record_modify.php?name=<?php echo $course; ?>&cid=<?php echo $course_id; ?>&nq=<?php echo $num_ques; ?>&qid=" + qid + "&ansC="+ inputValue +"&ansA="+"&ansB="+"&ansD="+"&ansContent=";
                         window.location.href = url;
                         }
-                        function handleChangeD(event) {
-                        var inputValue = document.getElementById("inputD").value;    // Display the value in the console
+                        function handleChangeD(qid) {
+                        var inputValue = document.getElementById("inputD"+ qid).value;    
                         console.log("The input value has changed to:", inputValue);
-                        var url = "./controller/record_modify.php?name=<?php echo $course; ?>&cid=<?php echo $course_id; ?>&nq=<?php echo $num_ques; ?>&qid=" + 1 + "&ansD="+ inputValue + "&ansA="+"&ansB="+"&ansC="+"&ansContent=";
+                        var url = "./controller/record_modify.php?name=<?php echo $course; ?>&cid=<?php echo $course_id; ?>&nq=<?php echo $num_ques; ?>&qid=" + qid + "&ansD="+ inputValue + "&ansA="+"&ansB="+"&ansC="+"&ansContent=";
                         window.location.href = url;
                         }
-                        function handleChangeContent(event) {
-                        var inputValue = document.getElementById("inputContent").value;    // Display the value in the console
+                        function handleChangeContent(qid) {
+                        var inputValue = document.getElementById("inputContent"+ qid).value;    
                         console.log("The input value has changed to:", inputValue);
                         var url = "./controller/record_modify.php?name=<?php echo $course; ?>&cid=<?php echo $course_id; ?>&nq=<?php echo $num_ques; ?>&qid=" + 1 + "&ansContent="+ inputValue + "&ansB="+"&ansC="+"&ansD="+"&ansA  =";
                         window.location.href = url;
@@ -99,20 +102,16 @@
                                         var C = $(this).find('C').text();
                                         var D = $(this).find('D').text();
                                         if(QID == <?php echo $question_id; ?>){
-                                                var A_ans = '<input type="text"  onchange="handleChangeA(event)" id="inputA" placeholder="' + A + '"></input>';
-                                                var B_ans = '<input type="text"  onchange="handleChangeB(event)" id="inputB" placeholder="' + B + '"></input>';
-                                                var C_ans = '<input type="text"  onchange="handleChangeC(event)" id="inputC" placeholder="' + C + '"></input>';
-                                                var D_ans = '<input type="text"  onchange="handleChangeD(event)" id="inputD" placeholder="' + D + '"></input>';
-
-                                                
-
-                                                
-
+                                                var A_ans = '<input type="text"  onchange="handleChangeA(' + QID + ')" id="inputA' + QID + '" placeholder="' + A + '"></input>';
+                                                var B_ans = '<input type="text"  onchange="handleChangeB(' + QID + ')" id="inputB' + QID + '" placeholder="' + B + '"></input>';
+                                                var C_ans = '<input type="text"  onchange="handleChangeC(' + QID + ')" id="inputC' + QID + '" placeholder="' + C + '"></input>';
+                                                var D_ans = '<input type="text"  onchange="handleChangeD(' + QID + ')" id="inputD' + QID + '" placeholder="' + D + '"></input>';
+                                                                                         
                                             var questionHTML = '<h2 class="text-primary">Câu hỏi số ' + QID + '</h2>'
                                                             + '<h6 class="text-dark">Chủ đề: ' + topic + ' - Mức độ: ' + level + '</h6>'
                                                             + '<br>'
                                                             + '<p>Câu hỏi</p>'
-                                                            + '<input type="text" onchange="handleChangeContent(event)" id="inputContent" placeholder="' + content + '"></input>'
+                                                            + '<input type="text" onchange="handleChangeContent(' + QID + ')" id="inputContent' + QID + '" placeholder="' + content + '"></input>'
                                                             + '<br>';
                                             if(img_link != ''){
                                                 questionHTML += '<div class="text-center">'
