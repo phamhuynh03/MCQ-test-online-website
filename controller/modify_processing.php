@@ -1,6 +1,5 @@
 <?php
     session_start();
-    echo 'noi xu lí data';
     $conn = mysqli_connect("localhost", "root", "", "assignment");
 
     if(mysqli_connect_errno()){
@@ -29,10 +28,10 @@
       
         // Execute the SQL statement and handle errors (optional)   
         if (mysqli_query($conn, $sql)) {
-            header("Location: ../mycourse.php");
-            mysqli_close($conn);
+            
         } else {
           echo "Error inserting question: " . mysqli_error($conn); 
         }
       }
+      header("Location: ../mycourse.php");
 ?>
