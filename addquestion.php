@@ -84,7 +84,7 @@
                                     <br>
                                     <h6>Đáp án đúng</h6>  
                                     <select id="ans'.$i.'" name="ans'.$i.'" class="form-control input-md">
-                                        <option >Đáp án đúng</option>
+                                        <option value="A">Đáp án đúng</option>
                                         <option value="A">Câu A</option>
                                         <option value="B">Câu B</option>
                                         <option value="C">Câu C</option>
@@ -93,7 +93,7 @@
                                     <br>
                                     <h6>Độ khó</h6>  
                                     <select id="ans'.$i.'" name="level'.$i.'" class="form-control input-md">
-                                        <option>Chọn độ khó</option>
+                                        <option value="Dễ">Chọn độ khó</option>
                                         <option value="Dễ">Dễ</option>
                                         <option value="Vừa">Vừa</option>
                                         <option value="Khó">Khó</option>
