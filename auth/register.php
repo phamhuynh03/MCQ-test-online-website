@@ -26,7 +26,7 @@
                     <form action="register_processing.php" method="POST">
                         <div class="header-text text-center">
                             <h2>Đăng ký</h2>
-                            <p>Vui lòng tạo tài khoản của bạn tại đây!</p>
+                            <p>Vui lòng điền đầy đủ thông tin phía bên dưới!</p>
                         </div>
                         <div class="mb-3">
                             <input type="text" name="First_name" id="First_name" placeholder="Tên" class="form-control form-control-lg bg-light fs-6"

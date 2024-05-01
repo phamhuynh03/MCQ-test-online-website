@@ -16,50 +16,42 @@
         <div class="container-fluid px-5 py-4">
             <h1 class="text-primary">Thêm khóa học</h1>
         </div>
-
-    <div class="container pt-3 pb-5 bg-light">
-    <div class="row justify-content-center">    
-    <div class="col-md-8">
-        <div class="text-center ">
-            <h4>Thông tin khóa học</h4>
-        </div>
-        <form action="./controller/addcourse_processing.php" method="post">
-        <div class="form-group">
-            <label class="col-md-12 control-label" for="name"></label>  
-            <div class="col-md-12">
-            <input id="name" name="name" placeholder="Nhập tên khóa học" class="form-control input-md" type="text">  
-        </div>
-
-        <div class="form-group">
-            <label class="col-md-12 control-label" for="total"></label>  
-            <div class="col-md-12">
-            <input id="total" name="total" placeholder="Nhập số câu hỏi" class="form-control input-md" type="number">        
+        <div class="container-fluid p-5 bg-secondary bg-opacity-10 text-primary">
+            <div class="row justify-content-center">    
+                <div class="col-md-8">
+                    <div class="text-center ">
+                        <h2>Thông tin khóa học</h2>
+                    </div>
+                    <form action="./controller/addcourse_processing.php" method="post">
+                        <div class="form-group">
+                            <label class="col-md-12 control-label"></label>  
+                            <div class="col-md-12">
+                                <input id="name" name="name" placeholder="Nhập tên khóa học" class="form-control input-md" type="text">  
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-12 control-label"></label>  
+                            <div class="col-md-12">
+                                <input id="total" name="total" placeholder="Nhập số câu hỏi" class="form-control input-md" type="number">        
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-12 control-label"></label>  
+                            <div class="col-md-12">
+                                <textarea rows="8" cols="8" name="desc" class="form-control" placeholder="Mô tả"></textarea>  
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-12 control-label"></label>
+                            <div class="d-grid gap-2 col-md-2 col-sm-4 mx-auto">
+                                <button class="btn btn-md bg-primary bg-opacity-25">Xác nhận</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
 
-
-        <div class="form-group">
-            <label class="col-md-12 control-label" for="desc"></label>  
-            <div class="col-md-12">
-            <textarea rows="8" cols="8" name="desc" class="form-control" placeholder="Mô tả"></textarea>  
-            </div>
-        </div>
-
-        
-
-        <div class="form-group">
-            <label class="col-md-12 control-label" for=""></label>
-            <div class="col-md-12"> 
-                <input  type="submit" style="margin-left:45%" class="btn btn-primary" value="Submit" class="btn btn-primary"/>
-            </div>
-        </div>
-   
-        </div>  
-        </form>
-    </div>
-    </div>
-    </div>
-
-    <?php include('./navbar/footer.php'); ?>
+        <?php include('./navbar/footer.php'); ?>
     </body>
 </html>

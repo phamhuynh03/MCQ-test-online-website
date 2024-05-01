@@ -2,217 +2,86 @@
 <questions>
   <question>
     <QID>1</QID>
-    <QIDreal>17</QIDreal>
-    <topic>HTML</topic>
-    <content>Thẻ HTML nào thường dùng cho cho định dạng tiêu đề lớn nhất?</content>
-    <img_link/>
+    <QIDreal>11</QIDreal>
+    <topic>Mô hình phát triển phần mềm</topic>
+    <content>Hình ảnh này đang mô tả mô hình phát triển phần mềm nào?</content>
+    <img_link>https://images.viblo.asia/26474432-60fc-4a26-b34a-8d1d8d8d0a3b.png</img_link>
     <level>Dễ</level>
-    <A>head</A>
-    <B>h1</B>
-    <C>h6</C>
-    <D>heading</D>
-    <correct_ans>B</correct_ans>
-    <choosen>B</choosen>
+    <A>Mô hình Incremental</A>
+    <B>Mô hình Agile</B>
+    <C>Mô hình Waterfall</C>
+    <D>Mô hình Spiral</D>
+    <correct_ans>C</correct_ans>
+    <choosen> </choosen>
   </question>
   <question>
     <QID>2</QID>
-    <QIDreal>18</QIDreal>
-    <topic>HTML</topic>
-    <content>Đâu là tên phần tử HTML dùng để định nghĩa dữ liệu sẽ hiển thị trên thanh tiêu đề của tài liệu?</content>
+    <QIDreal>12</QIDreal>
+    <topic>Mô hình phát triển phần mềm</topic>
+    <content>Mô hình Agile chủ yếu dựa trên hai mô hình nào?</content>
     <img_link/>
-    <level>Dễ</level>
-    <A>html</A>
-    <B>head</B>
-    <C>title</C>
-    <D>meta</D>
-    <correct_ans>C</correct_ans>
-    <choosen>A</choosen>
+    <level>Vừa</level>
+    <A>Iterative và Incremental</A>
+    <B>Iterative và Waterfall</B>
+    <C>Spiral và Incremental</C>
+    <D>Spiral và Waterfall</D>
+    <correct_ans>A</correct_ans>
+    <choosen> </choosen>
   </question>
   <question>
     <QID>3</QID>
-    <QIDreal>19</QIDreal>
-    <topic>HTML</topic>
-    <content>Đâu là tên phần tử HTML dùng để thực hiện việc xuống dòng mới?</content>
+    <QIDreal>13</QIDreal>
+    <topic>Mô hình phát triển phần mềm</topic>
+    <content>Đâu không phải là ưu điểm của mô hình Spiral?</content>
     <img_link/>
-    <level>Dễ</level>
-    <A>tab</A>
-    <B>br</B>
-    <C>break</C>
-    <D>lb</D>
-    <correct_ans>B</correct_ans>
-    <choosen>D</choosen>
+    <level>Khó</level>
+    <A>Ứng dụng tốt với các dự án lớn và quan trọng</A>
+    <B>Luôn có thời gian cho khách hàng phản hồi về sản phẩm</B>
+    <C>Chức năng bổ sung và thay đổi có thể được thêm vào những giai đoạn sau</C>
+    <D>Tài liệu cho dự án thường rất ngắn gọn vì có ít các giai đoạn trung gian</D>
+    <correct_ans>D</correct_ans>
+    <choosen> </choosen>
   </question>
   <question>
     <QID>4</QID>
-    <QIDreal>20</QIDreal>
-    <topic>CSS</topic>
-    <content>Thứ tự nào sau đây là đúng khi xếp tầng của CSS theo độ ưu tiên từ thấp đến?</content>
-    <img_link/>
+    <QIDreal>14</QIDreal>
+    <topic>Sơ đồ</topic>
+    <content>Tên gọi bằng tiếng Anh của sơ đồ dưới đây là gì?</content>
+    <img_link>https://creately.com/static/assets/guides/sequence-diagram-tutorial/image15.webp</img_link>
     <level>Dễ</level>
-    <A>external style sheet, internal style sheet, browser default, inline style</A>
-    <B>inline style, browser default, external style sheet, internal style sheet</B>
-    <C>browser default, internal style sheet, inline style, external style sheet</C>
-    <D>browser default, external style sheet, internal style sheet, inline style</D>
-    <correct_ans>D</correct_ans>
+    <A>Use-case diagram</A>
+    <B>Sequence diagram</B>
+    <C>Class diagram</C>
+    <D>Activity diagram</D>
+    <correct_ans>B</correct_ans>
     <choosen> </choosen>
   </question>
   <question>
     <QID>5</QID>
-    <QIDreal>21</QIDreal>
-    <topic>CSS</topic>
-    <content>Thuộc tính CSS nào sau đây được dùng để tạo hiệu ứng chữ in đậm (bold)?</content>
+    <QIDreal>15</QIDreal>
+    <topic>Sơ đồ</topic>
+    <content>Tên của mỗi use-case trong Use-case diagram phải được đặt bằng?</content>
     <img_link/>
-    <level>Dễ</level>
-    <A>font-variant</A>
-    <B>font-family</B>
-    <C>font-weight</C>
-    <D>font-style</D>
-    <correct_ans>C</correct_ans>
-    <choosen>C</choosen>
+    <level>Vừa</level>
+    <A>Danh từ</A>
+    <B>Danh từ hoặc cụm danh từ</B>
+    <C>Động từ hoặc danh từ</C>
+    <D>Động từ hoặc cụm động từ</D>
+    <correct_ans>D</correct_ans>
+    <choosen> </choosen>
   </question>
   <question>
     <QID>6</QID>
-    <QIDreal>22</QIDreal>
-    <topic>CSS</topic>
-    <content>Trong CSS3, phần tử img có giá trị thuộc tính display mặc định là?</content>
-    <img_link/>
-    <level>Vừa</level>
-    <A>block</A>
-    <B>flex</B>
-    <C>inline</C>
-    <D>inline-block</D>
-    <correct_ans>D</correct_ans>
-    <choosen>A</choosen>
-  </question>
-  <question>
-    <QID>7</QID>
-    <QIDreal>23</QIDreal>
-    <topic>CSS</topic>
-    <content>Giả sử chúng ta muốn thiết kế các phần tử block xếp chồng lên nhau thành nhiều lớp, thuộc tính CSS nào sau đây sẽ được sử dụng để quy định thứ tự các lớp?</content>
-    <img_link/>
-    <level>Vừa</level>
-    <A>x-index</A>
-    <B>s-index</B>
-    <C>d-index</C>
-    <D>z-index</D>
-    <correct_ans>D</correct_ans>
-    <choosen>B</choosen>
-  </question>
-  <question>
-    <QID>8</QID>
-    <QIDreal>24</QIDreal>
-    <topic>PHP</topic>
-    <content>Con vật nào được xem là linh vật của ngôn ngữ PHP?</content>
-    <img_link/>
-    <level>Dễ</level>
-    <A>Voi</A>
-    <B>Cáo</B>
-    <C>Gà trống</C>
-    <D>Rắn</D>
-    <correct_ans>A</correct_ans>
-    <choosen> </choosen>
-  </question>
-  <question>
-    <QID>9</QID>
-    <QIDreal>25</QIDreal>
-    <topic>PHP</topic>
-    <content>Đâu là tên biến trong đoạn code sau?</content>
-    <img_link>https://devpro.edu.vn/public/uploads/images/blog/cu-phap-bien-du-lieu-trong-php-10.jpg</img_link>
-    <level>Dễ</level>
-    <A>br</A>
-    <B>name</B>
-    <C>echo</C>
-    <D>php</D>
-    <correct_ans>B</correct_ans>
-    <choosen>B</choosen>
-  </question>
-  <question>
-    <QID>10</QID>
-    <QIDreal>26</QIDreal>
-    <topic>PHP</topic>
-    <content>Trong PHP không có vòng lặp nào sau đây?</content>
-    <img_link/>
-    <level>Vừa</level>
-    <A>do while</A>
-    <B>for</B>
-    <C>foreach</C>
-    <D>repeat until</D>
-    <correct_ans>D</correct_ans>
-    <choosen>D</choosen>
-  </question>
-  <question>
-    <QID>11</QID>
-    <QIDreal>27</QIDreal>
-    <topic>PHP</topic>
-    <content>Đoạn mã PHP này sẽ cho ra kết quả là gì khi thực thi?&#13;
-$x = 1;&#13;
-$y = 2;&#13;
-echo ($x !== $y);</content>
-    <img_link/>
-    <level>Vừa</level>
-    <A>Đoạn mã bị lỗi</A>
-    <B>False</B>
-    <C>1</C>
-    <D>0</D>
+    <QIDreal>16</QIDreal>
+    <topic>Sơ đồ</topic>
+    <content>Trong class diagram, kí hiệu bên dưới đây có ý nghĩa gì?</content>
+    <img_link>https://cdn.codegym.vn/wp-content/uploads/2022/02/cach-doc-uml-class-diagram-7-1.png</img_link>
+    <level>Khó</level>
+    <A>sự liên hợp (association)</A>
+    <B>sự phụ thuộc (dependency)</B>
+    <C>sự tổ hợp (composition)</C>
+    <D>sự tụ tập (aggregation)</D>
     <correct_ans>C</correct_ans>
-    <choosen> </choosen>
-  </question>
-  <question>
-    <QID>12</QID>
-    <QIDreal>28</QIDreal>
-    <topic>PHP</topic>
-    <content>Đoạn mã PHP dưới đây sẽ cho kết quả gì khi thực thi?&#13;
-$s="chess was played";&#13;
-echo strlen(substr($s,3,2))</content>
-    <img_link/>
-    <level>Vừa</level>
-    <A>1</A>
-    <B>2</B>
-    <C>3</C>
-    <D>0</D>
-    <correct_ans>B</correct_ans>
-    <choosen>A</choosen>
-  </question>
-  <question>
-    <QID>13</QID>
-    <QIDreal>29</QIDreal>
-    <topic>PHP</topic>
-    <content>Trong chương trình PHP sử dụng thư viện mysqli, phát biểu nào sau đây có thể được dùng để chọn cơ sở dữ liệu có tên là dbname</content>
-    <img_link/>
-    <level>Khó</level>
-    <A>mysqli=select_db('dbname');</A>
-    <B>mysqli-&gt;select_db('dbname');</B>
-    <C>$mysqli=select_db('dbname');</C>
-    <D>$mysqli-&gt;select_db('dbname');</D>
-    <correct_ans>D</correct_ans>
-    <choosen> </choosen>
-  </question>
-  <question>
-    <QID>14</QID>
-    <QIDreal>30</QIDreal>
-    <topic>jQuery</topic>
-    <content>Phát biểu jQuery nào dưới đây xoá tất cả các phần tử con của phần tử có id là result?</content>
-    <img_link/>
-    <level>Vừa</level>
-    <A>$(".notif").empty();</A>
-    <B>$("#notif").empty();</B>
-    <C>$(".notif").remove();</C>
-    <D>$("#notif").remove();</D>
-    <correct_ans>B</correct_ans>
-    <choosen> </choosen>
-  </question>
-  <question>
-    <QID>15</QID>
-    <QIDreal>31</QIDreal>
-    <topic>jQuery</topic>
-    <content>Sử dụng thư viện jQuery trong javascript, phát biểu: $("div#myDiv &gt; .para") sẽ trả về các phần tử nào sau đây?</content>
-    <img_link/>
-    <level>Khó</level>
-    <A>Các phần tử có thuộc tính class="para" là con của các phần tử có tên thẻ là div và có thuộc tính id="myDiv"</A>
-    <B>Các phần tử có thuộc tính class="para" hoặc có thuộc tính id="myDiv"</B>
-    <C>Các phần tử có thuộc tính id="myDiv" nằm bên trong các phần tử có tên thẻ là div và có thuộc tính class="para"</C>
-    <D>Các phần tử có thuộc tính class="para" và có thuộc tính id="myDiv"</D>
-    <correct_ans>A</correct_ans>
     <choosen> </choosen>
   </question>
 </questions>

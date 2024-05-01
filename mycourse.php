@@ -45,7 +45,7 @@
                         <button class="btn bg-primary bg-opacity-10" type="Submit"><img src="./asset/img/search.svg"></button>
                     </div>
                     <div class="col-xl-8 pe-4 py-1 text-end">
-                        <a href="index.php" class="btn btn-md bg-primary bg-opacity-25 float-end">Thêm khóa học</a>
+                        <a href="addcourse.php" class="btn btn-md bg-primary bg-opacity-25 float-end">Thêm khóa học</a>
                     </div>
                 </div>
             </form>
@@ -81,7 +81,7 @@
                                                                         + '<h6 class="card-text lh-sm text-dark">' + school + '</h6>'
                                                                     + '</div>'
                                                                     + ' <div class="card-footer">'
-                                                                        + '<a href="#" class="btn btn-md bg-primary bg-opacity-25 float-end m-1">Xóa</a>'
+                                                                        + '<a href="./controller/delete_processing.php?cid=<?php echo $tid; ?>" class="btn btn-md bg-primary bg-opacity-25 float-end m-1">Xóa</a>'
                                                                         + '<a href="#" class="btn btn-md bg-primary bg-opacity-25 float-end m-1">Chỉnh sửa</a>'
                                                                         + '<a href="#" class="btn btn-md bg-primary bg-opacity-25 float-end m-1">Xuất</a>'
                                                                         + '<a href="./controller/create_queslist.php?name=' + course_name + '&cid=' + CID + '&nq=' + num_ques + '" class="btn btn-md bg-primary bg-opacity-25 float-end m-1">Làm bài</a>'

@@ -75,7 +75,7 @@
                                                                     + '</div>'
                                                                     + ' <div class="card-footer">';
                                                         if(checkTID == 'True'){
-                                                            courseHTML += '<a href="#" class="btn btn-md bg-primary bg-opacity-25 float-end m-1">Xóa</a>'
+                                                            courseHTML += '<a href="./controller/delete_processing.php?cid=<?php echo $tid; ?>" class="btn btn-md bg-primary bg-opacity-25 float-end m-1">Xóa</a>'
                                                                         + '<a href="#" class="btn btn-md bg-primary bg-opacity-25 float-end m-1">Chỉnh sửa</a>'
                                                                         + '<a href="#" class="btn btn-md bg-primary bg-opacity-25 float-end m-1">Xuất</a>';
                                                         }
