@@ -12,6 +12,13 @@
     $topic=$_POST['topic'];
     for($i = 1; $i <= $Num_ques; $i++){
         $question=$_POST['qns'.$i.''];
+        $fquestion='fqns'.$i.'';
+        if(!empty($_FILES[$fquestion]["name"])){
+            $fileName = basename($_FILES[$fquestion]["name"]); 
+            $question = $targetDir . $fileName; 
+            $fileType = pathinfo($targetFilePath,PATHINFO_EXTENSION);     
+            move_uploaded_file($_FILES[$fquestion]["tmp_name"], $question);
+        }
         $imglink=$_POST['img'.$i.''];
 
         $a=$_POST[$i.'1'];
