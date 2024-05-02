@@ -58,32 +58,38 @@
                         function handleChangeA(qid) {
                         var inputValue = document.getElementById("inputA" + qid).value;    
                         console.log("The input value has changed to:", inputValue);
-                        var url = "./controller/record_modify.php?name=<?php echo $course; ?>&cid=<?php echo $course_id; ?>&nq=<?php echo $num_ques; ?>&qid=" + qid + "&ansA="+ inputValue + "&ansB="+"&ansC="+"&ansD="+"&ansContent=";
+                        var url = "./controller/record_modify.php?name=<?php echo $course; ?>&cid=<?php echo $course_id; ?>&nq=<?php echo $num_ques; ?>&qid=" + qid + "&ansA="+ inputValue + "&ansB="+"&ansC="+"&ansD="+"&ansContent="+"&Correctans=";
                         window.location.href = url;
                         }
                         function handleChangeB(qid) {
                             
                         var inputValue = document.getElementById("inputB"+ qid).value;    
                         console.log("The input value has changed to:", inputValue);
-                        var url = "./controller/record_modify.php?name=<?php echo $course; ?>&cid=<?php echo $course_id; ?>&nq=<?php echo $num_ques; ?>&qid=" + qid + "&ansB="+ inputValue+ "&ansA="+"&ansC="+"&ansD="+"&ansContent=";
+                        var url = "./controller/record_modify.php?name=<?php echo $course; ?>&cid=<?php echo $course_id; ?>&nq=<?php echo $num_ques; ?>&qid=" + qid + "&ansB="+ inputValue+ "&ansA="+"&ansC="+"&ansD="+"&ansContent="+"&Correctans=";
                         window.location.href = url;
                         }
                         function handleChangeC(qid) {
                         var inputValue = document.getElementById("inputC"+ qid).value;    
                         console.log("The input value has changed to:", inputValue);
-                        var url = "./controller/record_modify.php?name=<?php echo $course; ?>&cid=<?php echo $course_id; ?>&nq=<?php echo $num_ques; ?>&qid=" + qid + "&ansC="+ inputValue +"&ansA="+"&ansB="+"&ansD="+"&ansContent=";
+                        var url = "./controller/record_modify.php?name=<?php echo $course; ?>&cid=<?php echo $course_id; ?>&nq=<?php echo $num_ques; ?>&qid=" + qid + "&ansC="+ inputValue +"&ansA="+"&ansB="+"&ansD="+"&ansContent="+"&Correctans=";
                         window.location.href = url;
                         }
                         function handleChangeD(qid) {
                         var inputValue = document.getElementById("inputD"+ qid).value;    
                         console.log("The input value has changed to:", inputValue);
-                        var url = "./controller/record_modify.php?name=<?php echo $course; ?>&cid=<?php echo $course_id; ?>&nq=<?php echo $num_ques; ?>&qid=" + qid + "&ansD="+ inputValue + "&ansA="+"&ansB="+"&ansC="+"&ansContent=";
+                        var url = "./controller/record_modify.php?name=<?php echo $course; ?>&cid=<?php echo $course_id; ?>&nq=<?php echo $num_ques; ?>&qid=" + qid + "&ansD="+ inputValue + "&ansA="+"&ansB="+"&ansC="+"&ansContent="+"&Correctans=";
                         window.location.href = url;
                         }
                         function handleChangeContent(qid) {
                         var inputValue = document.getElementById("inputContent"+ qid).value;    
                         console.log("The input value has changed to:", inputValue);
-                        var url = "./controller/record_modify.php?name=<?php echo $course; ?>&cid=<?php echo $course_id; ?>&nq=<?php echo $num_ques; ?>&qid=" + 1 + "&ansContent="+ inputValue + "&ansB="+"&ansC="+"&ansD="+"&ansA  =";
+                        var url = "./controller/record_modify.php?name=<?php echo $course; ?>&cid=<?php echo $course_id; ?>&nq=<?php echo $num_ques; ?>&qid=" + qid + "&ansContent="+ inputValue + "&ansB="+"&ansC="+"&ansD="+"&ansA  ="+"&Correctans=";
+                        window.location.href = url;
+                        }
+                        function handleChangeCorrectans(qid) {
+                        var inputValue = document.getElementById("inputCorrectans"+ qid).value;    
+                        console.log("The input value has changed to:", inputValue);
+                        var url = "./controller/record_modify.php?name=<?php echo $course; ?>&cid=<?php echo $course_id; ?>&nq=<?php echo $num_ques; ?>&qid=" + qid + "&ansContent="+ "&ansB="+"&ansC="+"&ansD="+"&ansA  ="+"&Correctans="+ inputValue;
                         window.location.href = url;
                         }
                         $(document).ready(function(){
@@ -124,7 +130,13 @@
                                                             + B_ans
                                                             + C_ans
                                                             + D_ans
-                                                            + '<h6 class="text-primary py-2">Đáp án đúng là đáp án ' + correct_ans + '</h6>';
+                                                            +'<br>'+'<select onchange="handleChangeCorrectans(' + QID + ')" id="inputCorrectans' + QID + '" class="form-control input-md">Đáp án đúng là đáp án ' + correct_ans +
+                                                                '<option>Đáp án đúng</option>'
+                                                                +'<option value="A">Câu A</option>'+
+                                                                '<option value="B">Câu B</option>'+
+                                                                '<option value="C">Câu C</option>'+
+                                                                '<option value="D">Câu D</option>'+                             
+                                                            '</select>';
                                             $('#main-ques').append(questionHTML);
                                         }
                                     });
