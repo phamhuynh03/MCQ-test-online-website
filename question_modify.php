@@ -101,6 +101,7 @@
                                         var B = $(this).find('B').text();
                                         var C = $(this).find('C').text();
                                         var D = $(this).find('D').text();
+                                        var correct_ans = $(this).find('correct_ans').text();
                                         if(QID == <?php echo $question_id; ?>){
                                                 var A_ans = '<h6>Đáp án A</h6><input class="form-control input-md py-2" type="text" onchange="handleChangeA(' + QID + ')" id="inputA' + QID + '" placeholder="' + A + '"></input>';
                                                 var B_ans = '<h6>Đáp án B</h6><input class="form-control input-md py-2" type="text" onchange="handleChangeB(' + QID + ')" id="inputB' + QID + '" placeholder="' + B + '"></input>';
@@ -122,7 +123,8 @@
                                                             + A_ans
                                                             + B_ans
                                                             + C_ans
-                                                            + D_ans;
+                                                            + D_ans
+                                                            + '<h6 class="text-primary py-2">Đáp án đúng là đáp án ' + correct_ans + '</h6>';
                                             $('#main-ques').append(questionHTML);
                                         }
                                     });
