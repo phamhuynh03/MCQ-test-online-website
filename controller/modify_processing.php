@@ -21,10 +21,10 @@
         $C = $question->getElementsByTagName('C')->item(0)->textContent;
         $D = $question->getElementsByTagName('D')->item(0)->textContent;
         $correct_ans = $question->getElementsByTagName('correct_ans')->item(0)->textContent;
-
+        
         // Prepare SQL statement (replace with your actual table structure)
         $sql = "UPDATE question
-        SET Content='$Content',Img_link='$img_link' ,Level='$level', A='$A',B='$B',C='$C',  D='$D'   WHERE QID=$qidreal";
+        SET Content='$Content',Img_link='$img_link' ,Level='$level', A='$A',B='$B',C='$C',  D='$D', Correct_ans='$correct_ans'  WHERE QID=$qidreal";
       
         // Execute the SQL statement and handle errors (optional)   
         if (mysqli_query($conn, $sql)) {
