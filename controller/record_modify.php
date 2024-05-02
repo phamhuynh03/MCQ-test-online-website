@@ -57,7 +57,13 @@
             $newElement = $xml->createElement('content', $ansContent);
             $choosenElement->parentNode->replaceChild($newElement, $choosenElement);
            } 
-           
+           if ($_GET['Correctans']!='')
+           {
+            $ansContent = $_GET['Correctans'];
+            $choosenElement = $question->getElementsByTagName('correct_ans')->item(0);
+            $newElement = $xml->createElement('correct_ans', $ansContent);
+            $choosenElement->parentNode->replaceChild($newElement, $choosenElement);
+           } 
         }
     }
     $xml->save('quiz.xml');
