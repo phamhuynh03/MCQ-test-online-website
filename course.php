@@ -75,7 +75,7 @@
                                                                     + '</div>'
                                                                     + ' <div class="card-footer">';
                                                         if(checkTID == 'True'){
-                                                            courseHTML += '<a href="./controller/delete_processing.php?cid=' + CID + '&page=course" class="btn btn-md bg-primary bg-opacity-25 float-end m-1">Xóa</a>'
+                                                            courseHTML += '<a href="./controller/delete_processing.php?cid=' + CID + '&page=course" class="btn btn-md bg-danger bg-opacity-25 float-end m-1">Xóa</a>'
                                                                         + '<a href="./controller/create_questionlist_modify.php?name=' + course_name + '&cid=' + CID + '&nq=' + num_ques + '" class="btn btn-md bg-primary bg-opacity-25 float-end m-1">Chỉnh sửa</a>';
                                                         }
                                                             courseHTML += '<a href="./controller/create_queslist.php?name=' + course_name + '&cid=' + CID + '&nq=' + num_ques + '" class="btn btn-md bg-primary bg-opacity-25 float-end m-1">Làm bài</a>'

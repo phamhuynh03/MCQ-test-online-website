@@ -29,7 +29,7 @@
     else{
         $_SESSION['login_email'] = $email;
         $_SESSION['login_pass'] = $password;
-        header("Location: login.php?error=Your email and password do not match!");
+        header("Location: login.php?error=Email hoặc mật khẩu của bạn không đúng!");
     }
     mysqli_close($conn);
 ?>

@@ -27,9 +27,16 @@
         ?>
 
         <div class="container-fluid px-5 py-4">
-            <h1 class="text-primary">Thông tin cá nhân</h1>
+            <h1 class="text-primary">Chỉnh sửa thông tin</h1>
         </div>
         <div class="container-fluid p-5 bg-secondary bg-opacity-10 text-primary">
+            <div class="row gx-3 mb-4">
+                <div class="col-md-7"></div>
+                <div class="col-md-3">
+                    <a href="password_change.php" class="btn btn-md bg-primary bg-opacity-25 float-end">Thay đổi mật khẩu</a>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
             <form action="./controller/profile_processing.php" method="POST">
                 <div class="row gx-3 mb-4">
                     <div class="col-md-2"></div>

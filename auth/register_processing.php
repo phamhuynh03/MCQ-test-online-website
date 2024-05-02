@@ -34,7 +34,7 @@
         $sql = "INSERT INTO teacher (Email, Password, First_name, Last_name, School) VALUES ('$email', '$hashpass', '$firstname', '$lastname', '$school')";
         mysqli_query($conn, $sql);
         
-        header("Location: login.php?success=Successful registration!");
+        header("Location: login.php?success=Đăng ký thành công!");
     }
     else{
         $_SESSION['first'] = $firstname;
@@ -43,7 +43,7 @@
         $_SESSION['reg_mail'] = $email;
         $_SESSION['reg_pass'] = $password;
         $_SESSION['confirm_pass'] = $password;
-        header("Location: register.php?error=This email is already used!");
+        header("Location: register.php?error=Email này đã được sử dụng!");
     }
     mysqli_close($conn);
 ?>
